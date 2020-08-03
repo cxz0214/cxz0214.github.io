@@ -471,14 +471,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    12 分
                 </div>
                 
                 
@@ -578,8 +578,26 @@
 <h2 id="三、Markdown进阶使用"><a href="#三、Markdown进阶使用" class="headerlink" title="三、Markdown进阶使用"></a>三、Markdown进阶使用</h2><h3 id="1、超链接"><a href="#1、超链接" class="headerlink" title="1、超链接"></a><strong>1、超链接</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Markdown支持两种形式的链接语法：行内式和参考式。</p>
 <ul>
 <li><strong>行式链接</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>行内式语法</code>:<code>内容[链接名](链接地址）内容</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>：这就是<a href="http://baidu.com" target="_blank" rel="noopener">百度</a>,点击一下，你就知道！<br>&nbsp;&nbsp;&nbsp;&nbsp;当然如果想在新标签也中打开链接网址，学过html的都知道，可以用<code>&lt;a href=&quot;链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</code><br>&nbsp;&nbsp;&nbsp;&nbsp;例如：<code>&lt;a href=&quot;http://baidu.com&quot; target=&quot;_blank&quot;&gt;百度一下&lt;/a&gt;</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>：<a href="http://baidu.com" target="_blank">百度一下</a><br>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-<li><strong>参考式链接</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>参考式链接语法</code>：<code>内容[链接名][id]内容</code>+<code>[id]:链接地址</code>,后者可以写在文章的任意位置，当然一般写在底部。<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>:<code>内容可参考[百度一下][1].[1]:www.baidu.com</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>:内容可参考[百度一下][1]<br>&nbsp;&nbsp;&nbsp;&nbsp;[1]:<a href="http://baidu.com" target="_blank" rel="noopener">http://baidu.com</a></li>
+<li><strong>参考式链接</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>参考式链接语法</code>：<code>内容[链接名][id]内容</code>+<code>[id]:链接地址</code>,后者可以写在文章的任意位置，当然一般写在底部。<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>:<code>内容可参考[百度一下][1].[1]:www.baidu.com</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>:内容可参考[百度][baidu]<br>&nbsp;&nbsp;&nbsp;&nbsp;[baidu]:<a href="http://baidu.com/" target="_blank" rel="noopener">http://baidu.com/</a></li>
 </ul>
+<h3 id="2、自动链接"><a href="#2、自动链接" class="headerlink" title="2、自动链接"></a><strong>2、自动链接</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;Markdown也可以自动链接的形式来处理网址和电子邮件信箱，只需要用尖括号括起来就可以了，Markdown会将其自动转换成链接。<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>:<code>&lt;http://baidu.com&gt;</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>:<a href="http://baidu.com" target="_blank" rel="noopener">http://baidu.com</a></p>
+<h3 id="3、图片的使用"><a href="#3、图片的使用" class="headerlink" title="3、图片的使用"></a><strong>3、图片的使用</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;在日常的博客编写的过程中少不了图片的使用。Markdown中的图片插入不同于word直接拖拽式的，而是通过特定的语法来引用。与超链接相同，图片的插入同样分为<code>行内式</code>和<code>参考式</code>两种。</p>
+<ul>
+<li><p><strong>行内式</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>语法</code>:<code>![自定义内容](URL)</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>:<code>![行情分析](https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png)</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>:<img src="https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png" alt="行情分析"><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>注意</code>:上面的<code>URL</code>可以为本地路径，也可以是图片的网址。当然显然第二种更好，因为这样当本地路径发生变化时图片并不会丢失。这里我选择的是<code>腾讯云图床</code>对博客中的图片进行存储。</p>
+</li>
+<li><p><strong>参考式</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;参考式的用法与超链接大同小异，不在赘述！</p>
+</li>
+<li><p><strong>图片的对齐方式</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>语法</code>:<code>&lt;div align=center&gt;![自定义内容](URL)</code>,想要居右对齐，修改<code>align</code>参数为<code>right</code>即可。与上述的文字的对齐方式大同小异，不再演示。</p>
+</li>
+<li><p><strong>图片大小的设置</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>语法</code>：<code>&lt;img src=&quot;URL&quot; width=&quot;数值或者百分比&quot; height=&quot;数值或百分比&quot;/&gt;</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>:<code>&lt;img src=&quot;https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png&quot; width=&quot;200&quot; height=&quot;100&quot; div align=center/&gt;</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>:</p>
+<img src="https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png" width="400" height="300" div align="center/">
+
+</li>
+</ul>
+<h3 id="4、LaTeX公式"><a href="#4、LaTeX公式" class="headerlink" title="4、LaTeX公式"></a><strong>4、LaTeX公式</strong></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;由于本人可能近期用到LaTeX公式的情况比较少，所以仅举一个原作者中提到的一个例子。<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>例子</code>:<code>$ X\stackrel{F}{\longrightarrow}Y$</code><br>&nbsp;&nbsp;&nbsp;&nbsp;<code>效果</code>:$ X\stackrel{F}{\longrightarrow}Y$</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;以上列举的是最为常用的Markdown用法，当然Markdown还有许多其他的用法，感兴趣的可以查阅相关资料。</p>
+<hr>
+<p>参考文章：<a href="https://zhuanlan.zhihu.com/p/99319314" target="_blank" rel="noopener">Markdown语法及原理从入门到高级(可能是全网最全）</a></p>
 
             </div>
             <hr />
@@ -1306,7 +1324,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.6k</span>
+            <span class="white-color">3.2k</span>
             
 
             <br>

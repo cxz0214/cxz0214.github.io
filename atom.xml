@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.alexxinzhe.com/"/>
-  <updated>2020-08-02T09:54:33.173Z</updated>
+  <updated>2020-08-03T04:18:36.525Z</updated>
   <id>https://blog.alexxinzhe.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Markdown语法总结</title>
+    <link href="https://blog.alexxinzhe.com/2020/08/03/markdown-yu-fa-zong-jie/"/>
+    <id>https://blog.alexxinzhe.com/2020/08/03/markdown-yu-fa-zong-jie/</id>
+    <published>2020-08-03T00:39:22.000Z</published>
+    <updated>2020-08-03T04:18:36.525Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;昨天和前天经过&lt;code&gt;极其痛苦&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="写博客" scheme="https://blog.alexxinzhe.com/categories/%E5%86%99%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Markdown" scheme="https://blog.alexxinzhe.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我的个人博客</title>
     <link href="https://blog.alexxinzhe.com/2020/08/02/wo-de-ge-ren-bo-ke/"/>
     <id>https://blog.alexxinzhe.com/2020/08/02/wo-de-ge-ren-bo-ke/</id>
     <published>2020-08-02T09:32:24.000Z</published>
-    <updated>2020-08-02T09:54:33.173Z</updated>
+    <updated>2020-08-03T00:56:12.265Z</updated>
     
     <summary type="html">
     

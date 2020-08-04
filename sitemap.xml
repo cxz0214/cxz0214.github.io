@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.alexxinzhe.com/2020/08/04/chu-shi-hua-yu-qing-li/</loc>
+    
+    <lastmod>2020-08-04T00:19:29.272Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.alexxinzhe.com/2020/08/03/markdown-yu-fa-zong-jie/</loc>
     
     <lastmod>2020-08-03T09:00:31.496Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://blog.alexxinzhe.com/categories/index.html</loc>
+    <loc>https://blog.alexxinzhe.com/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.alexxinzhe.com/archives/index.html</loc>
+    <loc>https://blog.alexxinzhe.com/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

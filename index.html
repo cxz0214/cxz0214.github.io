@@ -358,6 +358,13 @@
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
+    <div id="prev-cover" class="left waves-effect carousel-control">
+        <i class="icon fa fa-angle-left"></i>
+    </div>
+    <div id="next-cover" class="right waves-effect carousel-control">
+        <i class="icon fa fa-angle-right"></i>
+    </div>
+    
 
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
@@ -469,18 +476,39 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 $(function () {
     let coverSlider = $('.carousel');
     coverSlider.carousel({
-        duration: Number('120'),
+        duration: Number('300'),
         fullWidth: true,
         indicators: 'true' === 'true'
     });
 
     let carouselIntervalId;
     
+    // Loop to call the next cover article picture.
+    let autoCarousel = function() {
+        carouselIntervalId = setInterval(function () {
+            coverSlider.carousel('next');
+        }, 5000);
+    };
+    autoCarousel();
+    
 
     let restartPlay = function () {
         
+        clearInterval(carouselIntervalId);
+        autoCarousel();
+        
     };
 
+    
+    // prev and next cover post.
+    $('#prev-cover').click(function () {
+        coverSlider.carousel('prev');
+        restartPlay();
+    });
+    $('#next-cover').click(function () {
+        coverSlider.carousel('next');
+        restartPlay();
+    });
     
 });
 </script>
@@ -502,6 +530,10 @@ $(function () {
 <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <div class="music-player">
     
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;音乐列表
+    </div>
+    
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s12">
             <div id="aplayer" class="music"></div>
@@ -522,7 +554,7 @@ $(function () {
         preload: 'auto',
         volume: Number('0.7'),
         listFolded: 'false' === 'true',
-        listMaxHeight: '',
+        listMaxHeight: '50',
         audio: JSON.parse('[{"name":"平凡之路","artist":"朴树","url":"/medias/music/pingfanzhilu.mp3","cover":"/medias/music/avatars/朴树.jpg"},{"name":"Dancing with your ghost","artist":"Sasha Sloan","url":"/medias/music/dancing with your ghost.mp3","cover":"/medias/music/avatars/DD.jpg"},{"name":"春娇与志明","artist":"街道办","url":"/medias/music/春娇与志明.mp3","cover":"/medias/music/avatars/春娇与志明.jpg"}]')
     });
 });

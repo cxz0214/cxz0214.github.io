@@ -4,21 +4,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="生日快乐！, 热爱生活 学习 宅">
+    <meta name="keywords" content="《图解HTTP》-- 简单的HTTP协议, 热爱生活 学习 宅">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="生日快乐鸭，秃冉同学！ 
+    <meta name="description" content="HTTP协议用于客户端和服务端之间的通信
+客户端：请求访问文本或图像等资源的一端
+服务器端： 提供资源响应的一端
 
-
-不知道说啥，就先来给您跳支舞吧，艾瑞八代嗨起来！！！
-
-    
-
-
-
-前言
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;大概7月多的一天，我突然想起来你的生日在七月初六，然后就冲忙地打开了手机日历看了以下">
+通过请求和响应的交换达成通信协议规定 ：请求从客户端发出，最后服务器端响应该请求并返回。
+请求报文示例：
+GET /inde">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +22,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>生日快乐！ | 秃头的晨曦</title>
+    <title>《图解HTTP》-- 简单的HTTP协议 | 秃头的晨曦</title>
     <link rel="icon" type="image/png" href="/medias/avatars/头像.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -77,10 +73,7 @@
     </script>
 
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
-<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
-<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
 
@@ -329,7 +322,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'b968e8bbbac5318680e60cee33b2cad83d75ea30b4005ac8903c7d3c66895146';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -342,13 +335,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        生日快乐！
+                        《图解HTTP》-- 简单的HTTP协议
                     </div>
                 </div>
             </div>
@@ -458,24 +451,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/心情/" target="_blank">
-                            <span class="chip bg-color">心情</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/随笔/" class="post-category" target="_blank">
-                            随笔
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -483,7 +463,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-16
+                    2020-11-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -497,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    4 分
                 </div>
                 
                 
@@ -520,68 +500,111 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <center><font size="10" color="red">生日快乐鸭，秃冉同学！</font> </center>
+                <h3 id="HTTP协议用于客户端和服务端之间的通信"><a href="#HTTP协议用于客户端和服务端之间的通信" class="headerlink" title="HTTP协议用于客户端和服务端之间的通信"></a>HTTP协议用于客户端和服务端之间的通信</h3><ul>
+<li>客户端：请求访问文本或图像等资源的一端</li>
+<li>服务器端： 提供资源响应的一端</li>
+</ul>
+<h3 id="通过请求和响应的交换达成通信"><a href="#通过请求和响应的交换达成通信" class="headerlink" title="通过请求和响应的交换达成通信"></a>通过请求和响应的交换达成通信</h3><p><strong>协议规定</strong> ：请求从客户端发出，最后服务器端响应该请求并返回。</p>
+<p><strong>请求报文示例</strong>：</p>
+<pre class="line-numbers language-java"><code class="language-java">GET <span class="token operator">/</span>index<span class="token punctuation">.</span>htm HTTP<span class="token operator">/</span><span class="token number">1.1</span>
+Host<span class="token operator">:</span> hackr<span class="token punctuation">.</span>jp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li><strong>GET</strong>:请求访问服务器的类型，称为方法(method)。</li>
+<li><strong>/index.htm</strong>:请求访问的资源对象，也叫请求URL(request-URI)。</li>
+<li><strong>HTTP/1.1</strong>: HTTP版本号，用来提示客户端使用的HTTP协议功能。</li>
+</ul>
+<p><strong>请求报文的构成</strong>:</p>
+<ul>
+<li><strong>请求方法</strong></li>
+<li><strong>请求URI</strong></li>
+<li><strong>协议版本</strong></li>
+<li><strong>请求首部字段</strong>(可选)</li>
+<li><strong>内容实体</strong>(可选)</li>
+</ul>
+<p><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202020-11-22%20203441.png" alt="请求报文的构成"></p>
+<p><strong>服务器端响应返回示例</strong></p>
+<pre class="line-numbers language-java"><code class="language-java">HTTP<span class="token operator">/</span><span class="token number">1.1</span> <span class="token number">200</span> OK
+Date<span class="token operator">:</span> Tue<span class="token punctuation">,</span> <span class="token number">10</span> JUI <span class="token number">2012</span> <span class="token number">06</span><span class="token operator">:</span><span class="token number">50</span><span class="token operator">:</span><span class="token number">15</span> GMT
+Content<span class="token operator">-</span>Length<span class="token operator">:</span><span class="token number">362</span>
+Content<span class="token operator">-</span>Type<span class="token operator">:</span>text<span class="token operator">/</span>html
 
+<span class="token operator">&lt;</span>html<span class="token operator">></span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><p><strong>HTTP/1.1</strong>:表示服务器对应的HTTP版本</p>
+</li>
+<li><p><strong>200 OK</strong>：请求的处理结果的状态码(status code)和原因短语(reson-phrase)</p>
+</li>
+<li><p><strong>Date</strong>:创建响应时间的日期时间，是首部字段(header-field)内的一个属性</p>
+</li>
+<li><p><strong>资源实体的主体</strong>(entity body)</p>
+</li>
+</ul>
+<p><strong>响应报文的构成</strong>:</p>
+<ul>
+<li><strong>协议版本</strong></li>
+<li><strong>状态码</strong></li>
+<li><strong>用以解释状态码的原因语句</strong></li>
+<li><strong>响应首部字段和实体主体</strong>(可选)</li>
+</ul>
+<p><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202020-11-22%20204909.png" alt="响应报文构成"></p>
+<h3 id="HTTP是不保存状态的协议"><a href="#HTTP是不保存状态的协议" class="headerlink" title="HTTP是不保存状态的协议"></a>HTTP是不保存状态的协议</h3><p>&nbsp;&nbsp;HTTP是一种不保存状态的协议，即无状态(stateless)协议。HTTP协议自身不对请求和响应之间的通信状态进行保存。也就是说在HTTTP这个级别，洗衣对于发送过的请求或响应不做持久化处理。<br><strong>原因</strong>：为了更快地处理大量事物，确保协议的<code>可伸缩性</code>.<br><strong>如何解决？</strong>：引入<code>Cookie技术</code></p>
+<h3 id="请求URI定位资源"><a href="#请求URI定位资源" class="headerlink" title="请求URI定位资源"></a>请求URI定位资源</h3><p><strong>请求URI的方法</strong>：</p>
+<ul>
+<li><strong>URI为完整的请求URI</strong>：<pre class="line-numbers language-shell"><code class="language-shell">GET http://hackr.jp/index.htm HTTP/1.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><strong>在首部字段Host中写明网络域名或IP地址</strong>:<pre class="line-numbers language-java"><code class="language-java">GET <span class="token operator">/</span>index<span class="token punctuation">.</span>htm HTTP<span class="token operator">/</span><span class="token number">1.1</span>
+Host<span class="token operator">:</span> hackr<span class="token punctuation">.</span>jp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><strong>不是访问特定资源，而是对服务器本身发起的请求，可以用*来代替请求URI</strong>：<pre class="line-numbers language-java"><code class="language-java">OPTIONS <span class="token operator">*</span> HTTP<span class="token operator">/</span><span class="token number">1.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+&nbsp;&nbsp;上述语句表示查询HTTP服务器端支持的HTTP方法种类。</li>
+</ul>
+<h3 id="告知服务器意图的HTTP方法"><a href="#告知服务器意图的HTTP方法" class="headerlink" title="告知服务器意图的HTTP方法"></a>告知服务器意图的HTTP方法</h3><ul>
+<li><p><strong>GET</strong>:<code>获取资源</code></p>
+</li>
+<li><p><strong>POST</strong>:<code>传输实体主体</code></p>
+</li>
+<li><p><strong>PUT</strong>:传输文件(但是，鉴于 HTTP/1.1 的 PUT 方法自身不带验证机制，任何人都可以上传文件 , 存在安全性问题，因此一般的 Web 网站不使用该方法。若配合 Web 应用程序的验证机制，或架构设计采用 REST（ REpresentational State Transfer，表征状态转移）标准的同类 Web 网站，就可能会开放使用 PUT 方法。)</p>
+</li>
+<li><p><strong>HEAD</strong>:获得报文首部</p>
+</li>
+<li><p><strong>DELETE</strong>: 删除文件(不带验证机制)</p>
+</li>
+<li><p><strong>OPTIONS</strong>: 询问支持的方法</p>
+</li>
+<li><p><strong>TRACE</strong>: 追踪路径(发送请求时， 在 Max-Forwards 首部字段中填入数值，每经过一个服务器端就将该数字减 1， 当数值刚好减到 0 时，就停止继续传输，最后接收到请求的服务器端则返回状态码 200 OK 的响应。客户端通过 TRACE 方法可以查询发送出去的请求是怎样被加工修改 / 篡改的。这是因为，请求想要连接到源目标服务器可能会通过代理中转， TRACE 方法就是用来确认连接过程中发生的一系列操作。但是， TRACE 方法本来就不怎么常用，再加上它容易引发 XST(Cross-Site Tracing，跨站追踪)攻击，通常就更不会用到了。)</p>
+</li>
+<li><p><strong>CONNECT</strong>:要求用隧道协议连接代理(CONNECT 方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行 TCP 通信。主要使用 SSL(Secure Sockets Layer，安全套接层)和 TLS(Transport Layer Security，传输层安全)协议把通信内容加密后经网络隧道传输。)</p>
+<ul>
+<li><strong>格式如下</strong>：<pre class="line-numbers language-java"><code class="language-java">CONNECT 代理服务器名<span class="token operator">:</span>端口号 HTTP版本<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用方法下达命令"><a href="#使用方法下达命令" class="headerlink" title="使用方法下达命令"></a>使用方法下达命令</h3><p><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202020-11-22%20221319.png" alt="HTTP/1.0和HTTP/1.1支持的方法"></p>
+<h3 id="持久连接节省通信量"><a href="#持久连接节省通信量" class="headerlink" title="持久连接节省通信量"></a>持久连接节省通信量</h3><p><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E4%B8%80%E6%AC%A1%E8%BF%9E%E6%8E%A5.png" alt="多次连接"></p>
+<p><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E5%A4%9A%E6%AC%A1%E8%BF%9E%E6%8E%A5.png" alt="持久化连接"></p>
+<p><strong>持久化连接(HTTP Persistent Connections,也成为了HTTP keep-alive或HTTP connection reuse)的优点</strong>:减少了TCP连接的重复建立和断开所造成的额外开销，减轻服务器负载。减少开销的那部分时间使HTTP请求和响应能够更早的结束，Web页面显示更快。<br><code>注</code>:HTTP/1.1中，所有的连接默认都是持久连接。</p>
+<p><strong>管线化</strong>：从前发送请求后需等待并受到响应，才能发送下一个请求。管线化技术出现后，不用等待响应也可直接发送下一个请求。<br><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E7%AE%A1%E7%BA%BF%E5%8C%964.png" alt="管线化"></p>
+<h3 id="使用Cookie的状态管理"><a href="#使用Cookie的状态管理" class="headerlink" title="使用Cookie的状态管理"></a>使用Cookie的状态管理</h3><p> <strong>过程</strong>:<br> <img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E5%8D%9A%E5%AE%A2/Cookies.png" alt="含有Cookie的通信过程"></p>
+<ol>
+<li><strong>请求报文</strong>(没有Cookie信息的状态)<pre class="line-numbers language-java"><code class="language-java">GET <span class="token operator">/</span>reader<span class="token operator">/</span> HTTP<span class="token operator">/</span><span class="token number">1.1</span>
+Host<span class="token operator">:</span>hackr<span class="token punctuation">.</span>jp
+<span class="token operator">*</span> 首部字段内没有Cookie的相关信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>响应报文</strong>(服务器端生成Cookie信息)<pre class="line-numbers language-java"><code class="language-java">HTTP<span class="token operator">/</span><span class="token number">1.1</span> <span class="token number">200</span> OK
+Date<span class="token operator">:</span> Thu<span class="token punctuation">,</span> <span class="token number">12</span> Jul <span class="token number">2012</span> <span class="token number">07</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">20</span> GMT
+Server<span class="token operator">:</span>Apache
+<span class="token operator">&lt;</span>Set<span class="token operator">-</span>Cookie<span class="token operator">:</span> sid<span class="token operator">=</span><span class="token number">1342077140226724</span><span class="token punctuation">;</span> path<span class="token operator">=</span><span class="token operator">/</span><span class="token punctuation">;</span>expires<span class="token operator">=</span>Wed<span class="token punctuation">,</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">10</span><span class="token operator">-</span>Oct<span class="token operator">-</span><span class="token number">12</span> <span class="token number">07</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">20</span> GMT<span class="token operator">></span>
+Content<span class="token operator">-</span>Type<span class="token operator">:</span>text<span class="token operator">/</span>plain<span class="token punctuation">;</span>charset<span class="token operator">=</span>UTF<span class="token operator">-</span><span class="token number">8</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>请求报文</strong>(自动发送保存着的Cookie信息)<pre class="line-numbers language-java"><code class="language-java">GET <span class="token operator">/</span>image<span class="token operator">/</span> HTTP<span class="token operator">/</span><span class="token number">1.1</span>
+Host<span class="token operator">:</span>hackr<span class="token punctuation">.</span>jp
+Cookie<span class="token operator">:</span> sid<span class="token operator">=</span><span class="token number">1342077140226724</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
 <hr>
-<p><font size="4" color="black">不知道说啥，就先来给您跳支舞吧，艾瑞八代嗨起来！！！</font></p>
-<div align="left">
-    <img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/1.gif" width="100px"><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/2.gif" width="100px"><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/3.gif" width="100px"><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/4.gif" width="100px">
-</div>
 
-<hr>
-<p><span style="border-bottom:2px solid yellow"><font size="6" color="#ff8000">前言</font></span></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;大概7月多的一天，我突然想起来你的生日在七月初六，然后就冲忙地打开了手机日历看了以下你的生日是不是已经过了，然后尼，虚惊一场，还在8月多呢！！我印象中应该也没有送过你什么<code>生日礼物</code>，那么，这次呢就送一次？对，送！<br><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/d6eb04154d61c44f5395d6b191fb844a.jpg" width="120" height="120/"><br>&nbsp;&nbsp;&nbsp;&nbsp;光送礼物怎么成，不得讲几句话嘛。但是手写嘛又太麻烦，那就用博客的形式写下来吧（虽然比手写还麻烦)。可能未来某一天我这个小网站不存在了，那这篇博客也会消失，但是在它还未消失之前呢，就当是对你22周岁生日的一个特殊的纪念吧！<br><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/356e33a00c0b5d31f27d267b210c44fb.gif" width="120" height="120/"></p>
-<hr>
-<p><span style="border-bottom:2px solid yellow"><font size="6" color="#ff8000">回忆篇</font></span></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;“记得那是2002年的第一场雪，比2001年的雪来的稍晚了一些..”，emmm,背错词了（假装这里有表情！【Markdown语法在我这里不支持输入表情，哭辽】）。总之，在我刚上初中的时候，那时候的我还保留着小学学来的那一套“小混混的思想”，也不喜欢学习，白天不想听课，晚上上自习就给别人编故事。哈哈，我这编故事的能力还是有的。小学的时候就是因为经常给旁边的人编故事听，然后就被韩淼给<code>盯</code>上了。反正每天的生活就那样，直到那天中午遇到着急的出不去大门的你。反正在我的影响中也就是那时候认识你的。那天其实很想送你出去的，但是呢，没敢，哈哈哈。后来呢，说话的次数也多了起来，我就发现我渐渐地喜欢上你了，哈哈哈。上课有时候就想看看你，看到赵文辉跟你玩就不开心，听说你跟254的那个男生的消息也难过。等等吧。其实那时候也经常想：“我长得这么丑，又没啥优点，人家怎么会喜欢我”，所以有时候也很胆怯，喜欢但又不敢喜欢。</p>
-<img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/a9114c7064e315a9752d5e54bc2ab9b6.jpg" width="120" height="120/">
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;后来，我也算是长大了吧，一个是被班主任那次骂了，还有就是，也不知道怎么说，就感觉自己爸妈挺可怜的，我两个姐姐都没有考上高中，我大姐想补习一年，但是家里说没钱就没有同意，我爸妈都想着供我上学。所以那时候也就决定好好学习嘛，然后人就安静下来了。所以对你呢，就更是一种<code>不敢喜欢</code>的态度了。因为那时候就觉得搞对象肯定影响学习，所以那时候真的是很矛盾。有时候吧，也特别想像他们那种不学习的，然后就光明正大的搞对象那种，就光明正大的喜欢你，但是呢，还是那两个字：<code>没敢</code>，哈哈哈哈。我记得那时候我回到家里就想跟你聊天，然后你的备注我写的是<code>李辉</code>，哈哈哈，我太机智了，我妈他们问我跟谁聊天呢，我就说一个男同学，叫<code>李辉</code>！我一直也不敢跟我妈他们提起你。但是有一回我们就说起了你，原来是好像一次家长会吧，我妈去的比较早吧，然后遇到了你爸，就记住了你的名字。我当时就想：这是什么缘分，哈哈哈，然后后面就有时候会问我你的情况，比如有时候我说了我的成绩，我妈就会问一下你的，我当然会自信地说：没我高，哈哈哈哈。<br>&nbsp;&nbsp;&nbsp;&nbsp;初中三年回忆太多，电话中也说了不少，还有的一些，我这语文水平也不知道怎么描述，就不多讲了。反正<code>虽然你不是我的初恋，但曾经却是我最喜欢的女生，给我回忆最多的人</code>。</p>
-<img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/e6b06995133010378414a0184e554cad.jpg" width="120" height="120/">
-
-<hr>
-<p><span style="border-bottom:2px solid yellow"><font size="6" color="#ff8000">当下篇</font></span></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;今年应该是我们这么多年联系最多的一段时间了。我说说我的感觉吧。每次跟你聊天的时候都会很开心，尤其是打电话的时候，虽然不知道该说些什么，但还是舍不得挂掉电话。我不知道这叫不叫喜欢哈，也可能是我这个人平时比较无聊，突然有个跟我聊天的，再加上之前的熟悉感，就会有一种开心的感觉。<br><img src="https://i03piccdn.sogoucdn.com/dbed1ed3f18eb8de" width="120" height="120"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;说说我的<code>心里话</code>，其实我有想过和你在一起，所以我也问过你两次是不是还喜欢我，你回答的很对，的确，这么久不见了，可能大家都变化了很多（譬如我，现在糟老头子一个，又丑又老），也的确无法准确定义喜不喜欢。我那天问你的爱好什么的，就希望我去了解你的爱好，然后好有一些共同的话题。你知道我是一个比较多愁善感的人，很多时候容易心情不好，等等吧，反正很多缺点，我的确也希望能找一个活泼一点的女生。可能我有时候也会比较幼稚，但感觉这个东西也只有时间才能改变。emmmm,不管怎么样吧，随缘吧，对吧。即使以后不能在一块儿，我也是你很好的朋友，需要帮忙，随叫随到那种，关键还<code>免费</code>，这么好的朋友，赶紧好好珍惜他，哈哈哈。<br><img src="https://i03piccdn.sogoucdn.com/95053c7022dbf076" width="120" height="120"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;emmm，再说说我，今年真的太难了。学姐你都研究生上岸了，而我……，哭了，不读个研究生好像有点不好，但是鉴于今年这种特殊情况，加之我这又笨又懒的特性，所以考不上也情有可原。考上了固然好，考不上那就出去找工作，过个两年拖我妈找个媒人说个媳妇儿，愉快地度过<code>余生</code>。不过，不管考不考的上，明年毕业以后我要去你们学校找你，到时候好吃好喝招待好了，稍有怠慢，给你摁在地上摩擦，就这么愉快地决定了。<br><img src="https://i02piccdn.sogoucdn.com/8f3fb552861e634f" width="120" height="120"></p>
-<hr>
-<p><span style="border-bottom:2px solid yellow"><font size="6" color="#ff8000">幕后篇</font></span></p>
-<blockquote>
-<p>礼物篇</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;想起您老要过生日，这么惊天动地的大事件，必须要好好准备一下。到知乎上搜了半天<code>送女生朋友的生日礼物</code>之类的关键词，然后看到大多数是化妆品之类的，还有一些玩具啊、水杯啊，还有一些奇葩的东西。想想要不送点吃点？内心的另一个我突然骂道：“她的都150了，再吃要到300了”，<code>想想也就算了</code>。买支口红？不行，涂完了就把我给忘了哈哈哈。后来就搜了一下<code>古风</code>的有什么东西，结果看了一下好像没什么好的。那就送<code>汉服</code>吧。搜了半天，看有的挺好看的，但是那也只是我的审美。所以我就去问了我的一个女生同学，给他发了截图问那些好看一点。后来我还是觉得那个黑色的好看一点，又怕你不喜欢黑色，所以就问了你喜不喜欢黑色。那么问题来了，买多大尺码的呢？<code>150斤，一米五？</code> 在脑海中想象了一下这样的身材穿上那件汉服的效果，结果我<code>抽起了烟，皱起了眉头，一时间面如死灰</code>。哈哈哈，不开玩笑了，问你体重你也不说，我就只能按100多斤估计了（别打我）。身高就给你估计了160。对你要求只有一点：<code>不管礼物到了，大了小了，好不好看，都不能怪我，反正我是认真的做了，你要是怪我，给你摁在地上摩擦！！</code></p>
-<blockquote>
-<p>网站篇</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;光送个礼物怎么行？必须要说一些话，那么如何表达出来呢？作为一个<code>半吊子程序员</code>，就用我们的方式来表达。写个APP？算了算了，您老用的苹果手机，安卓开发还没学会，IOS就更没接触过了，再说了时间也不够。搞个网站整点炫酷的？结果去github看了一下，基本类似这样的：<br><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F_%E9%80%89%E6%8B%A9%E5%8C%BA%E5%9F%9F_20200819185515.png" alt="别人的生日网站"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;emmm，都比较简陋，奈何我的前端技术还是去年自学了一丢丢，也不会做特别炫酷的东西。所以就不搞那些花里胡哨的了（其实是搞不了，哈哈）。然后就想着以这种方式，把想说的话放到自己的网站上去。等那天我付不起这个域名的费用了，或者那天我抽筋又不小心删掉了，那可能就没了，不过我会多备份几份，希望它可以永远的存在下去，那天想看了（估计你也不想看），就打开看看。其实这个也不简单的，你看到的效果全是我这样写出来的：<br><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F_code_20200819190615.png" alt="写这篇博客的过程"><br>为了给网站搞点音乐，差点把这个网站推倒了重来，后来才发现，删除两行代码就好了，结果搞了我一天，emmm，不管怎么说吧，就想说下面这句话：</p>
-<table><tr><td bgcolor="#FF32"><font color="white">不管你喜欢与否，但，这就是我的表达方式。</font></td></tr></table>
-
-<hr>
-<p><span style="border-bottom:2px solid yellow"><font size="6" color="#ff8000">祝福篇</font></span></p>
-<blockquote>
-<p>学习上</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;祝您老在读研期间，少掉头发，多发论文，顺利毕业，找到心仪的工作！</p>
-<blockquote>
-<p>生活上</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;还是要说减肥这个问题，有句名言不知道你听过没？是一个很伟大的人说的，如下：</p>
-<center><font size="4">胖子的人生就像量筒，注定估读一生。</font></center>
-<p align="right">—— 陈歆哲</p>
-&nbsp;&nbsp;&nbsp;&nbsp;所以，多减肥，你就不会`孤独一生`了，哈哈哈。祝减肥成功，逆袭成功！
-
-<hr>
-<p><span style="border-bottom:2px solid yellow"><font size="6" color="#ff8000">总结</font></span></p>
-<center><font size="6" color="red">爸爸爱你</font></center>
-
-<hr>
-<table><tr><td bgcolor="#FF32"><font color="white">附：这篇博客中的字合成的你的照片：</font></td></tr></table>
-
-<p><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/%E5%AD%97%E5%83%8F.png" alt="秃冉同学"></p>
-<hr>
-
-    <div id="aplayer-CpiHRoAL" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5185085320" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
             </div>
             <hr />
 
@@ -739,9 +762,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《生日快乐！》
+                    《《图解HTTP》-- 简单的HTTP协议》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/08/16/sheng-ri-kuai-le/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 陈歆哲
             </a> 采用
@@ -1043,9 +1066,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/">
                     <div class="card-image">
@@ -1069,14 +1093,15 @@ GET /inde
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-22
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1087,31 +1112,31 @@ GET /inde
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/05/zhi-ling-xi-tong/">
+                <a href="/2020/08/16/sheng-ri-kuai-le/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="指令系统">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="生日快乐！">
                         
-                        <span class="card-title">指令系统</span>
+                        <span class="card-title">生日快乐！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            指令系统章节笔记
+                            生日快乐
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/计算机组成原理/" class="post-category" target="_blank">
-                                    计算机组成原理
+                            <a href="/categories/随笔/" class="post-category" target="_blank">
+                                    随笔
                                 </a>
                             
                             
@@ -1121,8 +1146,8 @@ GET /inde
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/考研/" target="_blank">
-                        <span class="chip bg-color">考研</span>
+                    <a href="/tags/心情/" target="_blank">
+                        <span class="chip bg-color">心情</span>
                     </a>
                     
                 </div>

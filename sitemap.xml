@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hello.alexxinzhe.co/2020/11/21/wo-de-bo-ke-qian-yi-cheng-gong-liao/</loc>
+    <loc>https://hello.alexxinzhe.co/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/</loc>
     
-    <lastmod>2020-11-21T04:11:59.781Z</lastmod>
+    <lastmod>2020-11-22T14:44:42.641Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hello.alexxinzhe.co/2020/08/04/chu-shi-hua-yu-qing-li/</loc>
+    
+    <lastmod>2020-11-22T14:44:42.641Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://hello.alexxinzhe.co/2020/08/05/zhi-ling-xi-tong/</loc>
     
     <lastmod>2020-08-16T01:20:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hello.alexxinzhe.co/2020/08/04/chu-shi-hua-yu-qing-li/</loc>
-    
-    <lastmod>2020-08-04T11:07:59.000Z</lastmod>
     
   </url>
   
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/categories/index.html</loc>
+    <loc>https://hello.alexxinzhe.co/tags/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/tags/index.html</loc>
+    <loc>https://hello.alexxinzhe.co/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

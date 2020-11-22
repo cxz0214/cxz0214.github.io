@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hello.alexxinzhe.co/2020/11/21/wo-de-bo-ke-qian-yi-cheng-gong-liao/</loc>
-    <lastmod>2020-11-21</lastmod>
+    <loc>https://hello.alexxinzhe.co/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/</loc>
+    <lastmod>2020-11-22</lastmod>
+  </url>  <url>
+    <loc>https://hello.alexxinzhe.co/2020/08/04/chu-shi-hua-yu-qing-li/</loc>
+    <lastmod>2020-11-22</lastmod>
   </url>  <url>
     <loc>https://hello.alexxinzhe.co/2020/08/16/sheng-ri-kuai-le/</loc>
     <lastmod>2020-08-23</lastmod>
@@ -15,8 +18,5 @@
   </url>  <url>
     <loc>https://hello.alexxinzhe.co/2020/08/05/zhi-ling-xi-tong/</loc>
     <lastmod>2020-08-16</lastmod>
-  </url>  <url>
-    <loc>https://hello.alexxinzhe.co/2020/08/04/chu-shi-hua-yu-qing-li/</loc>
-    <lastmod>2020-08-04</lastmod>
   </url>
 </urlset>

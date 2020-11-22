@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hello.alexxinzhe.co/"/>
-  <updated>2020-11-22T14:47:41.072Z</updated>
+  <updated>2020-11-22T14:52:52.382Z</updated>
   <id>https://hello.alexxinzhe.co/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hello.alexxinzhe.co/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/"/>
     <id>https://hello.alexxinzhe.co/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/</id>
     <published>2020-11-22T12:20:03.000Z</published>
-    <updated>2020-11-22T14:47:41.072Z</updated>
+    <updated>2020-11-22T14:52:52.382Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,10 @@
     
     </summary>
     
+      <category term="计算机网络" scheme="https://hello.alexxinzhe.co/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://hello.alexxinzhe.co/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   

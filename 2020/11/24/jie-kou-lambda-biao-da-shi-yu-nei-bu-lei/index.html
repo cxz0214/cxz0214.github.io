@@ -4,11 +4,20 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="指令系统, 热爱生活 学习 宅">
+    <meta name="keywords" content="函数式编程, 热爱生活 学习 宅">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="前言指令系统:计算机的所有功能，是硬件和软件的接口和界面。不仅影响CPU的硬件结构，同时也直接影响系统软件、机器的功能、效率和使用范围。机器指令:计算机实现某种基本操作的命令，计算机的一切工作都是通过由机器指令组成的程序来完成的，即机器语言">
+    <meta name="description" content="接口
+作用:指定类应该做什么，并不指定它们具体怎么实现，一个类可以实现一个或多个接口。
+
+特点：
+
+接口中的方法都自动是public方法.
+
+接口绝对不会有实例字段.
+
+接口不是类，即不能使用new来实例化一个接口。尽管不能构造接口对象，却">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +25,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>指令系统 | 秃头的晨曦</title>
+    <title>函数式编程 | 秃头的晨曦</title>
     <link rel="icon" type="image/png" href="/medias/avatars/头像.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -316,7 +325,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'f5e85a7c3756b9585b89bfed75d9164d82eb0ceb51241da867d21aabacb9deb8';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -329,13 +338,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        指令系统
+                        函数式编程
                     </div>
                 </div>
             </div>
@@ -446,8 +455,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/考研/" target="_blank">
-                            <span class="chip bg-color">考研</span>
+                        <a href="/tags/Java基础/" target="_blank">
+                            <span class="chip bg-color">Java基础</span>
                         </a>
                         
                     </div>
@@ -458,8 +467,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/计算机组成原理/" class="post-category" target="_blank">
-                            计算机组成原理
+                        <a href="/categories/Java基础/" class="post-category" target="_blank">
+                            Java基础
                         </a>
                         
                     </div>
@@ -470,7 +479,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-05
+                    2020-11-24
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -484,14 +493,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    203
+                    546
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -507,25 +516,85 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong><font color="red">指令系统</font></strong>:计算机的所有功能，是硬件和软件的接口和界面。不仅影响CPU的硬件结构，同时也直接影响<code>系统软件</code>、<code>机器的功能</code>、<code>效率</code>和<code>使用范围</code>。<br><strong><font color="red">机器指令</font></strong>:计算机实现某种基本操作的命令，计算机的一切工作都是通过由机器指令组成的程序来完成的，即<code>机器语言程序</code>。<br><strong><font color="red">机器指令的三个基本要素</font></strong>:</p>
+                <h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><ul>
+<li><p><strong>作用:</strong>指定类应该做什么，并不指定它们具体怎么实现，一个类可以实现一个或多个接口。</p>
+</li>
+<li><p><strong>特点：</strong></p>
 <ul>
-<li>操作码（Operation Code,OP）</li>
-<li>源操作数地址（Source Operand Reference,S)</li>
-<li>目的操作数地址（Result Operand Reference,R）</li>
+<li><p>接口中的方法都自动是<strong>public方法</strong>.</p>
+</li>
+<li><p>接口绝对不会有<strong>实例字段</strong>.</p>
+</li>
+<li><p>接口不是类，即不能使用<strong>new</strong>来实例化一个接口。<strong>尽管不能构造接口对象，却能声明接口的变量.</strong></p>
+</li>
+<li><p>与类的继承层次一样，也可以扩展接口.</p>
+</li>
+<li><p>接口中可以包含<strong>常量</strong>.</p>
+</li>
+<li><p>接口中的字段总是<strong>public static final</strong>.</p>
+</li>
+<li><p>允许在接口中增加<strong>静态方法</strong>.</p>
+</li>
+<li><p>接口中的方法可以是<strong>private</strong>,private方法可以是静态方法或实例方法（作为接口其他方法的辅助方法）.</p>
+</li>
+<li><p>可以为接口方法提供一个<strong>默认实现</strong>，必须用<strong>default</strong>修饰符修饰.</p>
+</li>
+<li><p><strong>默认方法</strong>可以调用其他方法</p>
+</li>
 </ul>
-<p><strong><font color="red">指令字</font></strong>:指令表示为一个二进制位串，这个位串就叫<code>指令字</code>。</p>
-<table>
-<thead>
-<tr>
-<th>操作码OP</th>
-<th align="right">源操作数地址S</th>
-<th align="right">目的操作数R</th>
-</tr>
-</thead>
-</table>
-<center>`一个简单的指令字`</center>
+</li>
+</ul>
+<h3 id="Lambda表达式的基本语法"><a href="#Lambda表达式的基本语法" class="headerlink" title="Lambda表达式的基本语法"></a>Lambda表达式的基本语法</h3><ul>
+<li>参数</li>
+<li>接着 <code>-&gt;</code> ,连接参数与函数体</li>
+<li><code>-&gt;</code>之后的内容为方法体</li>
+</ul>
+<p>例如：（int a,int b）-&gt; a+b;</p>
+<p><strong>lambda表达式的简化</strong></p>
+<ul>
+<li>当只有一个参数时，可以不需要括号<code>()</code>.</li>
+<li>如果没有参数，则必须使用括号<code>()</code>表示空参数列表.</li>
+<li>对于多个参数，将参数列表放在<code>()</code>中.</li>
+<li>所有的lambda表达式方法体大多数是单行，该表达式的结果<strong>自动成为lambda表达式的返回值</strong> ，此时使用<strong>return</strong>将是非法的.</li>
+<li>如果lambda表达式确实需要多行，需放在<code>{}</code>中。这种情况下，如果有返回值，就必须使用<code>return</code>.</li>
+</ul>
+<p><strong>Lambda表达式的例子——递归</strong></p>
+<p><code>注</code>:递归方法必须是<strong>实例变量</strong>或<strong>静态变量</strong> ,否则会出现编译错误。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">interface</span> <span class="token class-name">IntCall</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">int</span> arg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>静态变量例子</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RecursiveFactorial</span><span class="token punctuation">{</span>
+    <span class="token keyword">static</span> IntCall fact<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        fact <span class="token operator">=</span> n <span class="token operator">-</span><span class="token operator">></span> n<span class="token operator">==</span><span class="token number">0</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> n <span class="token operator">*</span> fact<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>fact<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>实例变量例子</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RecursiveFibonacci</span><span class="token punctuation">{</span>
+    IntCall fib<span class="token punctuation">;</span>
 
-<h2 id="一、数据的表示"><a href="#一、数据的表示" class="headerlink" title="一、数据的表示"></a>一、数据的表示</h2>
+    <span class="token function">RecursiveFibonacci</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        fib <span class="token operator">=</span> n <span class="token operator">-</span><span class="token operator">></span> n <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">0</span><span class="token operator">:</span>
+                   n <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token number">1</span><span class="token operator">:</span>
+                   fib<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> fib<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> <span class="token function">fibonacci</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword">return</span> fib<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        RecursiveFibonacci rf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RecursiveFibonacci</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rf<span class="token punctuation">.</span><span class="token function">fibonacci</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h3>
             </div>
             <hr />
 
@@ -683,9 +752,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《指令系统》
+                    《函数式编程》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/08/05/zhi-ling-xi-tong/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/24/jie-kou-lambda-biao-da-shi-yu-nei-bu-lei/" property="cc:attributionName"
                rel="cc:attributionURL">
                 陈歆哲
             </a> 采用
@@ -987,46 +1056,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/16/sheng-ri-kuai-le/">
+                <a href="/2020/11/24/jie-kou-lambda-biao-da-shi-yu-nei-bu-lei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="生日快乐！">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="函数式编程">
                         
-                        <span class="card-title">生日快乐！</span>
+                        <span class="card-title">函数式编程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            生日快乐
+                            java中的函数式编程
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/Java基础/" class="post-category" target="_blank">
+                                    Java基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/心情/" target="_blank">
-                        <span class="chip bg-color">心情</span>
+                    <a href="/tags/Java基础/" target="_blank">
+                        <span class="chip bg-color">Java基础</span>
                     </a>
                     
                 </div>
@@ -1040,31 +1111,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/04/chu-shi-hua-yu-qing-li/">
+                <a href="/2020/11/22/tu-jie-http-jian-dan-de-http-xie-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="初始化与清理">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="《图解HTTP》-- 简单的HTTP协议">
                         
-                        <span class="card-title">初始化与清理</span>
+                        <span class="card-title">《图解HTTP》-- 简单的HTTP协议</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            总结了Java中对象的初始化与清理过程
+                            简单的HTTP协议
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-04
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/On-Java8/" class="post-category" target="_blank">
-                                    On Java8
+                            <a href="/categories/计算机网络/" class="post-category" target="_blank">
+                                    计算机网络
                                 </a>
                             
                             
@@ -1074,8 +1145,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/计算机网络/" target="_blank">
+                        <span class="chip bg-color">计算机网络</span>
                     </a>
                     
                 </div>
@@ -1221,25 +1292,6 @@
     
 
 </main>
-
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 
     <footer class="page-footer bg-color">

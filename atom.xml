@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hello.alexxinzhe.co/"/>
-  <updated>2020-11-27T01:54:48.769Z</updated>
+  <updated>2020-11-27T08:17:02.738Z</updated>
   <id>https://hello.alexxinzhe.co/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java基础知识点</title>
+    <link href="https://hello.alexxinzhe.co/2020/11/27/java-ji-chu-zhi-shi-dian/"/>
+    <id>https://hello.alexxinzhe.co/2020/11/27/java-ji-chu-zhi-shi-dian/</id>
+    <published>2020-11-27T02:24:35.000Z</published>
+    <updated>2020-11-27T08:17:02.738Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="https://hello.alexxinzhe.co/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://hello.alexxinzhe.co/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>类图</title>
     <link href="https://hello.alexxinzhe.co/2020/11/27/lei-tu/"/>
     <id>https://hello.alexxinzhe.co/2020/11/27/lei-tu/</id>
     <published>2020-11-27T01:38:45.000Z</published>
-    <updated>2020-11-27T01:54:48.769Z</updated>
+    <updated>2020-11-27T08:18:20.763Z</updated>
     
     <summary type="html">
     
@@ -47,7 +73,7 @@
     <link href="https://hello.alexxinzhe.co/2020/11/24/jie-kou-lambda-biao-da-shi-yu-nei-bu-lei/"/>
     <id>https://hello.alexxinzhe.co/2020/11/24/jie-kou-lambda-biao-da-shi-yu-nei-bu-lei/</id>
     <published>2020-11-24T08:26:18.000Z</published>
-    <updated>2020-11-25T05:01:17.559Z</updated>
+    <updated>2020-11-27T08:08:43.619Z</updated>
     
     <summary type="html">
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hello.alexxinzhe.co/"/>
-  <updated>2020-11-29T07:08:20.640Z</updated>
+  <updated>2020-11-29T09:12:54.265Z</updated>
   <id>https://hello.alexxinzhe.co/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hello.alexxinzhe.co/2020/11/29/java-bing-fa-bian-cheng/"/>
     <id>https://hello.alexxinzhe.co/2020/11/29/java-bing-fa-bian-cheng/</id>
     <published>2020-11-29T07:08:20.000Z</published>
-    <updated>2020-11-29T07:08:20.640Z</updated>
+    <updated>2020-11-29T09:12:54.265Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,10 @@
     
     </summary>
     
+      <category term="并发编程" scheme="https://hello.alexxinzhe.co/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="并发编程" scheme="https://hello.alexxinzhe.co/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    810
+                    1.1k
                 </div>
                 
 
@@ -604,6 +604,23 @@
 <li>语法：<strong>SELECT  表名.列名  FROM  数据库名.表名;</strong></li>
 </ul>
 <hr>
+<h3 id="第五章-排序检索数据"><a href="#第五章-排序检索数据" class="headerlink" title="第五章 排序检索数据"></a>第五章 排序检索数据</h3><h4 id="5-1-按一列排序"><a href="#5-1-按一列排序" class="headerlink" title="5.1 按一列排序"></a>5.1 按一列排序</h4><ul>
+<li>语法：<strong>SELECT  列名(一或多个)  FROM  表名  ORDER  BY  排序列名;</strong></li>
+<li><code>注意：</code><font color="red"><strong>排序列可以是选中的列，也可以是未显示的列</strong></font></li>
+</ul>
+<h4 id="5-2-按多个列排序"><a href="#5-2-按多个列排序" class="headerlink" title="5.2 按多个列排序"></a>5.2 按多个列排序</h4><ul>
+<li>语法 :<strong>SELECT  列名(一个或多个)  FROM  表名   ORDER  BY  排序列名1 , 排序列名2，….;</strong></li>
+<li><code>注意：</code><font color="red"><strong>按多个列排序时，排序完全按照所规定的顺序进行.</strong></font></li>
+</ul>
+<h4 id="5-3-指定排序方向"><a href="#5-3-指定排序方向" class="headerlink" title="5.3 指定排序方向"></a>5.3 指定排序方向</h4><ul>
+<li>语法：<strong>SELECT  列名   FROM  表名    ORDER BY  列名   DESC(降序)/ASC(默认升序) ;</strong></li>
+<li><code>注意:</code> <ul>
+<li><font color="red"><strong>DESC关键字只应用到直接位于其前面的列名.要对多个列降序必须对每个列指定DESC关键字.</strong></font></li>
+<li><font color="red"><strong>ASC即升序是默认的，故无需设定.</strong></font></li>
+<li><font color="red"><strong>使用ORDER BY 与 LIMIT 组合可以找出一列中最大值或最小值，但是ORDER BY 必须位于 FROM之后 ，LIMIT 位于ORDER BY之后，次序不对将产生错误信息！</strong></font></li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr />
@@ -1311,7 +1328,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11.3k</span>
+            <span class="white-color">11.6k</span>
             
 
             <br>

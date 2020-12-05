@@ -491,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    711
+                    810
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
                 
@@ -579,6 +579,7 @@
 <li><strong>SHOW GRANTS:</strong>用来显示授予用户(所有用户或特定用户)的安全权限</li>
 <li><strong>SHOW ERRORS</strong>和<strong>SHOW WARNINGS:</strong>用来显示服务器错误或警告信息</li>
 </ul>
+<hr>
 <h3 id="第四章-检索数据"><a href="#第四章-检索数据" class="headerlink" title="第四章 检索数据"></a>第四章 检索数据</h3><h4 id="4-1-检索单个列"><a href="#4-1-检索单个列" class="headerlink" title="4.1 检索单个列"></a>4.1 检索单个列</h4><ul>
 <li>语法：<strong>SELECT 列名 FROM 表名;</strong></li>
 <li><code>习惯</code>:SQL语句<strong>不区分大小写</strong>，一般关键字用大写，列名或表名用小写</li>
@@ -594,6 +595,15 @@
 <li>语法：<strong>SELECT DISTINCT  列名1 , 列名2 , … 列名n  FROM 表名;</strong></li>
 <li><code>注意：</code><font color="red"><strong>不能部分使用DISTINCT关键字，DISTINCT关键字应用于所有列而不仅是前置它的列</strong></font></li>
 </ul>
+<h4 id="4-5-限制结果"><a href="#4-5-限制结果" class="headerlink" title="4.5 限制结果"></a>4.5 限制结果</h4><ul>
+<li>语法：<strong>SELECT 列名(可多个)   FROM  表名  LIMIT  开始行数   结果所需显示的行数;</strong></li>
+<li>等价语法(Mysql5):<strong>SELECT  列名(可多个)  FROM 表名  LIMIT  结果所需显示的行数   OFFSET   开始行数</strong></li>
+<li><code>注意</code>:<font color="red"><strong>行0是第一行，行1是第二行</strong></font></li>
+</ul>
+<h4 id="4-6-使用完全限定的表名"><a href="#4-6-使用完全限定的表名" class="headerlink" title="4.6 使用完全限定的表名"></a>4.6 使用完全限定的表名</h4><ul>
+<li>语法：<strong>SELECT  表名.列名  FROM  数据库名.表名;</strong></li>
+</ul>
+<hr>
 
             </div>
             <hr />
@@ -1301,7 +1311,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11.2k</span>
+            <span class="white-color">11.3k</span>
             
 
             <br>

@@ -491,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
                 
@@ -621,6 +621,67 @@
 </ul>
 </li>
 </ul>
+<hr>
+<h3 id="第六章-过滤数据"><a href="#第六章-过滤数据" class="headerlink" title="第六章  过滤数据"></a>第六章  过滤数据</h3><h4 id="6-1-使用WHERE子句"><a href="#6-1-使用WHERE子句" class="headerlink" title="6.1 使用WHERE子句"></a>6.1 使用WHERE子句</h4><ul>
+<li>语法：<strong>SELECT  列名  FROM  表名  WHERE  条件;</strong></li>
+<li><code>注意：</code><font color="red"><strong>WHERE 子句的位置应该位于ORDER BY之前.</strong></font></li>
+</ul>
+<h4 id="6-2-WHERE-子句操作符"><a href="#6-2-WHERE-子句操作符" class="headerlink" title="6.2 WHERE 子句操作符"></a>6.2 WHERE 子句操作符</h4><table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">=</td>
+<td align="center">等于</td>
+</tr>
+<tr>
+<td align="center">&lt;&gt;</td>
+<td align="center">不等于</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">不等于</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">小于等于</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">大于等于</td>
+</tr>
+<tr>
+<td align="center">BETWEEN</td>
+<td align="center">在指定的两个值之间</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>检查单个值</strong><ul>
+<li>Mysql在执行匹配时<strong>不区分大小写</strong></li>
+</ul>
+</li>
+<li><strong>范围值检查</strong><ul>
+<li><strong>BETWEEN 开始值  AND 结束值</strong></li>
+</ul>
+</li>
+<li><strong>空值检查</strong><ul>
+<li><strong>使用  WHERE …  IS   NULL;</strong></li>
+<li><code>注意：</code><font color="red"><strong>NULL 无论是否匹配均不返回。</strong></font></li>
+</ul>
+</li>
+</ul>
+<hr>
 
             </div>
             <hr />
@@ -1328,7 +1389,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11.6k</span>
+            <span class="white-color">11.7k</span>
             
 
             <br>

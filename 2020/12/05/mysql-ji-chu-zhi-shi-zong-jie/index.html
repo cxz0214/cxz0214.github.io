@@ -11,11 +11,11 @@
     <meta name="description" content="第一章 了解SQL1.1 数据库基础
 数据库(database)：以某种有组织的方式存储的数据集合.
 
-表(table): 某种特类型数据的结构化清单.
+表(table): 某种特殊类型数据的结构化清单.
 
 模式(schema)：关于数据库和表的布局及特性的信息.
 
-列(column)：表中">
+列(column)：表">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -491,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
                 
@@ -517,7 +517,7 @@
                 <h3 id="第一章-了解SQL"><a href="#第一章-了解SQL" class="headerlink" title="第一章 了解SQL"></a>第一章 了解SQL</h3><h4 id="1-1-数据库基础"><a href="#1-1-数据库基础" class="headerlink" title="1.1 数据库基础"></a>1.1 数据库基础</h4><ul>
 <li><p><strong>数据库(database)：</strong>以某种有组织的方式存储的数据集合.</p>
 </li>
-<li><p><strong>表(table):</strong> 某种特类型数据的结构化清单.</p>
+<li><p><strong>表(table):</strong> 某种特殊类型数据的结构化清单.</p>
 </li>
 <li><p><strong>模式(schema)：</strong>关于数据库和表的布局及特性的信息.</p>
 </li>
@@ -682,6 +682,43 @@
 </li>
 </ul>
 <hr>
+<h3 id="第七章-数据过滤"><a href="#第七章-数据过滤" class="headerlink" title="第七章 数据过滤"></a>第七章 数据过滤</h3><h4 id="7-1-AND-操作符"><a href="#7-1-AND-操作符" class="headerlink" title="7.1 AND 操作符"></a>7.1 AND 操作符</h4><ul>
+<li>语法：<strong>SELECT  列名  FROM 表名  WHERE  条件1  AND  条件2;</strong></li>
+</ul>
+<h4 id="7-2-OR操作符"><a href="#7-2-OR操作符" class="headerlink" title="7.2 OR操作符"></a>7.2 OR操作符</h4><ul>
+<li><p>语法：<strong>SELECT  列名  FROM  表名  WHERE  条件1  OR  条件2;</strong></p>
+</li>
+<li><p><code>注意：</code><font color="red"><strong>OR 和 AND 同时出现在子句中时，AND优先级更高，可通过括号改变计算次序.</strong></font></p>
+</li>
+</ul>
+<h4 id="7-3-IN关键字"><a href="#7-3-IN关键字" class="headerlink" title="7.3 IN关键字"></a>7.3 IN关键字</h4><ul>
+<li><code>语法：</code><strong>SELECT  列名  FROM  表名  WHERE  列名 IN (值1，值2) ;</strong></li>
+<li><code>优点：</code><ul>
+<li>在使用长的合法选项清单时，<strong>IN</strong>操作符的语法更清楚且更直观.</li>
+<li>在使用<strong>IN</strong>时，计算的次序更容易管理.</li>
+<li><strong>IN</strong>操作符一般比OR操作符清单执行更快.</li>
+<li><strong>IN</strong>的最大的优点就是可以包含其他<strong>SELECT</strong>语句,使得能够更动态地建立<strong>WHERE</strong>子句.</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-4-NOT操作符"><a href="#7-4-NOT操作符" class="headerlink" title="7.4 NOT操作符"></a>7.4 NOT操作符</h4><ul>
+<li><code>作用：</code><strong>WHERE 子句中用来否定后跟条件的关键字.</strong></li>
+<li><code>注意：</code><font color="red"><strong>Mysql支持使用NOT对IN、BETWEEN和EXISTS子句取反，这与多数其他DBMS允许使用NOT对各种条件取反有很大的差别.</strong></font></li>
+</ul>
+<h3 id="第八章-用通配符进行过滤"><a href="#第八章-用通配符进行过滤" class="headerlink" title="第八章 用通配符进行过滤"></a>第八章 用通配符进行过滤</h3><h4 id="8-1-百分号（-）通配符"><a href="#8-1-百分号（-）通配符" class="headerlink" title="8.1 百分号（%）通配符"></a>8.1 百分号（%）通配符</h4><ul>
+<li><code>说明：</code><strong>% 表示<font color="red">任何字符</font>出现<font color="red">任意次数;</font></strong></li>
+<li><code>注意：</code><strong>通配符可以在搜索模式中任意位置使用，并且可以使用多个通配符.</strong></li>
+<li><code>例子：</code><strong>SELECT prod_id , pro_name  FROM  products  WHERE pro_name <font color="red">LIKE</font> ‘%anvil%’;</strong></li>
+<li><code>注意：</code><strong><font color="red">%代表搜索模式中给定位置的0个、1个或多个字符.</font></strong></li>
+</ul>
+<h4 id="8-2-下划线-通配符"><a href="#8-2-下划线-通配符" class="headerlink" title="8.2 下划线(_)通配符"></a>8.2 下划线(_)通配符</h4><ul>
+<li><code>说明：</code><strong><font color="red">下划线（_） 只能匹配单个字符.</font></strong></li>
+<li><code>例子：</code><strong>SELECT prod_id , prod_name FORM products WHERE prod_name <font color="red">LIKE</font> ‘_ ton anvil’;</strong></li>
+</ul>
+<h4 id="8-3-使用通配符的技巧"><a href="#8-3-使用通配符的技巧" class="headerlink" title="8.3 使用通配符的技巧"></a>8.3 使用通配符的技巧</h4><ul>
+<li><strong>不要过度使用通配符</strong>，如果其他操作符能达到相同的目的，应该使用其他操作符.</li>
+<li>在确实需要使用通配符时，除非绝对必要，否则<strong><font color="red">不要把它们用在搜索模式的开始处</font></strong>。把通配符置于搜索模式的开始处，搜索起来是最慢的.</li>
+</ul>
 
             </div>
             <hr />
@@ -1153,7 +1190,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Mysql基础知识总结">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Mysql基础知识总结">
                         
                         <span class="card-title">Mysql基础知识总结</span>
                     </div>
@@ -1203,7 +1240,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Java并发编程">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="Java并发编程">
                         
                         <span class="card-title">Java并发编程</span>
                     </div>
@@ -1389,7 +1426,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">11.7k</span>
+            <span class="white-color">12.2k</span>
             
 
             <br>

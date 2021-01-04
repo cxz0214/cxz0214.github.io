@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hello.alexxinzhe.co/2021/01/04/java-bing-fa-bian-cheng-xian-cheng-an-quan-xing/</loc>
+    
+    <lastmod>2021-01-04T06:43:44.933Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hello.alexxinzhe.co/2020/11/29/java-bing-fa-bian-cheng/</loc>
     
-    <lastmod>2021-01-04T04:44:49.059Z</lastmod>
+    <lastmod>2021-01-04T04:50:21.681Z</lastmod>
     
   </url>
   
@@ -121,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/tags/index.html</loc>
+    <loc>https://hello.alexxinzhe.co/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/archives/index.html</loc>
+    <loc>https://hello.alexxinzhe.co/tags/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

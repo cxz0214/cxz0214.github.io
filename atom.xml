@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hello.alexxinzhe.co/"/>
-  <updated>2021-01-04T06:43:44.933Z</updated>
+  <updated>2021-01-07T16:26:57.031Z</updated>
   <id>https://hello.alexxinzhe.co/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>java并发编程(线程安全性)</title>
-    <link href="https://hello.alexxinzhe.co/2021/01/04/java-bing-fa-bian-cheng-xian-cheng-an-quan-xing/"/>
-    <id>https://hello.alexxinzhe.co/2021/01/04/java-bing-fa-bian-cheng-xian-cheng-an-quan-xing/</id>
-    <published>2021-01-04T04:49:59.000Z</published>
-    <updated>2021-01-04T06:43:44.933Z</updated>
+    <title>关于SailVina中蛋白质的下载与受体提取的使用介绍</title>
+    <link href="https://hello.alexxinzhe.co/2021/01/07/guan-yu-sailvina-zhong-dan-bai-zhi-de-xia-zai-yu-shou-ti-ti-qu-de-shi-yong-jie-shao/"/>
+    <id>https://hello.alexxinzhe.co/2021/01/07/guan-yu-sailvina-zhong-dan-bai-zhi-de-xia-zai-yu-shou-ti-ti-qu-de-shi-yong-jie-shao/</id>
+    <published>2021-01-07T15:11:07.000Z</published>
+    <updated>2021-01-07T16:26:57.031Z</updated>
     
     <summary type="html">
     
@@ -35,10 +35,10 @@
     
     </summary>
     
-      <category term="并发编程" scheme="https://hello.alexxinzhe.co/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+      <category term="生物" scheme="https://hello.alexxinzhe.co/categories/%E7%94%9F%E7%89%A9/"/>
     
     
-      <category term="并发编程" scheme="https://hello.alexxinzhe.co/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+      <category term="生物" scheme="https://hello.alexxinzhe.co/tags/%E7%94%9F%E7%89%A9/"/>
     
   </entry>
   

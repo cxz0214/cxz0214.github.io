@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -491,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    10 分
                 </div>
                 
                 
@@ -720,7 +720,172 @@
 <li><strong>不要过度使用通配符</strong>，如果其他操作符能达到相同的目的，应该使用其他操作符.</li>
 <li>在确实需要使用通配符时，除非绝对必要，否则<strong><font color="red">不要把它们用在搜索模式的开始处</font></strong>。把通配符置于搜索模式的开始处，搜索起来是最慢的.</li>
 </ul>
-
+<hr>
+<h3 id="第九章-用正则表达式进行搜索"><a href="#第九章-用正则表达式进行搜索" class="headerlink" title="第九章 用正则表达式进行搜索"></a>第九章 用正则表达式进行搜索</h3><p><code>注：</code><font color="red"><strong>Mysql仅支持多数正则表达式实现的一个很小的例子</strong></font></p>
+<h4 id="9-1-基本字符匹配"><a href="#9-1-基本字符匹配" class="headerlink" title="9.1 基本字符匹配"></a>9.1 基本字符匹配</h4><p><code>例子：</code><strong>SELECT prod_name FROM products WHERE prod_name <font color="red">REGEXP</font> ‘1000’ ORDER BY prod_name;</strong></p>
+<p><code>注：</code><strong>LIKE 与 REGEXP的区别</strong></p>
+<p>​        <font color="red"><strong>LIKE匹配整个列。如果被匹配的文本在列值中出现，LIKE将不会找到它，相应的行也就不会被返回（除非使用通配符）。而REGEXP在列值内进行匹配，如果被匹配的文本在列值中出现，REGEXP将会找到它，响应的行将被返回。</strong></font></p>
+<ul>
+<li><strong>匹配不区分大小写：</strong>Mysql中的正则表达式匹配（自版本3.23.4后）<font color="red"><strong>不区分大小写</strong></font>，为区分大小写可以使用<strong>BINARY</strong>关键字，如<strong>WHERE prod_name REGEXP BINARY ‘JetPack  .000’</strong></li>
+</ul>
+<h4 id="9-2-进行OR匹配"><a href="#9-2-进行OR匹配" class="headerlink" title="9.2 进行OR匹配"></a>9.2 进行OR匹配</h4><p><code>例子：</code><strong>SELECT prod_name FROM products WHERE prod_name REGEXP <font color="red">‘1000|2000’</font> ORDER BY prod_name;</strong></p>
+<p><code>说明：</code>使用<font color="red"><strong>|</strong></font>从功能上类似于在<strong>SELECT语句</strong>中使用<strong>OR语句</strong>，多个<strong>OR条件</strong>可并入单个正则表达式。</p>
+<h4 id="9-3-匹配几个字符之一"><a href="#9-3-匹配几个字符之一" class="headerlink" title="9.3 匹配几个字符之一"></a>9.3 匹配几个字符之一</h4><p><code>功能：</code>只匹配特定字符</p>
+<p><code>例子：</code><strong>SELECT prod_name FROM products WHERE prod_name REGEXP ‘[123] Ton’ ORDER BY prod_name;</strong></p>
+<p><code>说明：</code>上述例子意思为<strong>匹配1或2或3</strong>。<strong>[ ]</strong>是另一种形式的OR语句。事实上，正则表达式<strong>[123]Ton</strong>为<strong>[1|2|3]Ton</strong>的缩写，也可以使用后者。</p>
+<h4 id="9-4-匹配范围"><a href="#9-4-匹配范围" class="headerlink" title="9.4 匹配范围"></a>9.4 匹配范围</h4><p><code>例子：</code><strong>SELECT prod_name FROM products WHERE prod_name REGEXP ‘[1-5] Ton’ ORDER BY prod_name;</strong></p>
+<h4 id="9-5-匹配特殊字符"><a href="#9-5-匹配特殊字符" class="headerlink" title="9.5 匹配特殊字符"></a>9.5 匹配特殊字符</h4><p><code>例子：</code><strong>SELECT vend_name FROM vendors WHERE vend_name REGEXP <font color="red">‘\\\.‘</font> ORDER BY vend_name;</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">元字符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>\\\\f</strong></td>
+<td align="center">换页</td>
+</tr>
+<tr>
+<td align="center"><strong>\\\\n</strong></td>
+<td align="center">换行</td>
+</tr>
+<tr>
+<td align="center"><strong>\\\\r</strong></td>
+<td align="center">回车</td>
+</tr>
+<tr>
+<td align="center"><strong>\\\\t</strong></td>
+<td align="center">制表</td>
+</tr>
+<tr>
+<td align="center"><strong>\\\\v</strong></td>
+<td align="center">纵向制表</td>
+</tr>
+</tbody></table>
+<p><code>匹配\:</code>为了匹配反斜杠()字符本身，需要使用\\\\\\。</p>
+<h4 id="9-6-匹配字符类"><a href="#9-6-匹配字符类" class="headerlink" title="9.6 匹配字符类"></a>9.6 匹配字符类</h4><p>存在找出你自己经常使用的数字、所有字母字符或所有数字字母字符等的匹配。为了更方便的工作，可以使用预定义的字符集，称为<strong>字符类</strong>，如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">类</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>[:alnum:]</strong></td>
+<td align="left">任意字母和数字(同[a-zA-Z0-9])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:alpha:]</strong></td>
+<td align="left">任意字符(同[a-zA-Z])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:blank:]</strong></td>
+<td align="left">空格和制表(同[\\\t])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:cntrl:]</strong></td>
+<td align="left">ASCII控制字符(同ASCII 0到31和127)</td>
+</tr>
+<tr>
+<td align="center"><strong>[:digit:]</strong></td>
+<td align="left">任意数字(同[0-9])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:graph:]</strong></td>
+<td align="left">与<strong>[:print:]</strong>相同，但不包括空格</td>
+</tr>
+<tr>
+<td align="center"><strong>[:lower:]</strong></td>
+<td align="left">任意小写字母（同[a-z])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:print:]</strong></td>
+<td align="left">任意可打印字符</td>
+</tr>
+<tr>
+<td align="center"><strong>[:punct:]</strong></td>
+<td align="left">既不在<strong>[:alnum:]</strong>又不在<strong>[:cntrl:]</strong>中的任意字符</td>
+</tr>
+<tr>
+<td align="center"><strong>[:space:]</strong></td>
+<td align="left">包括空格在内的任意空白字符(同[\\\f\\\n\\\r\\\t\\\v])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:upper:]</strong></td>
+<td align="left">任意大写字母(同[A-Z])</td>
+</tr>
+<tr>
+<td align="center"><strong>[:xdigit:]</strong></td>
+<td align="left">任意十六进制数字(同[a-fA-F0-9])</td>
+</tr>
+</tbody></table>
+<h4 id="9-7-匹配多个实例"><a href="#9-7-匹配多个实例" class="headerlink" title="9.7 匹配多个实例"></a>9.7 匹配多个实例</h4><p><strong><font color="red">重复元字符：</font></strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em><em>*</em></em></td>
+<td>0个或多个匹配</td>
+</tr>
+<tr>
+<td align="left"><strong>+</strong></td>
+<td>1个或多个匹配(等于<strong>{1,}</strong>)</td>
+</tr>
+<tr>
+<td align="left"><strong>?</strong></td>
+<td>0个或1个匹配(等于<strong>{0,1}</strong>)</td>
+</tr>
+<tr>
+<td align="left"><strong>{n}</strong></td>
+<td>指定数目的匹配</td>
+</tr>
+<tr>
+<td align="left"><strong>{n,}</strong></td>
+<td>不少于指定数目的匹配</td>
+</tr>
+<tr>
+<td align="left"><strong>{n,m}</strong></td>
+<td>匹配数目的范围(<font color="red"><strong>m不超过255</strong></font>)</td>
+</tr>
+</tbody></table>
+<p><code>例子：</code><strong>SELECT prod_name FROM products WHERE prod_name <font color="red">REGEXP</font> ‘[[:digit:]]{4}’ ORDER BY prod_name;</strong></p>
+<h4 id="9-8-定位符"><a href="#9-8-定位符" class="headerlink" title="9.8 定位符"></a>9.8 定位符</h4><p><strong><font color="red">定位元字符：</font></strong></p>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>^</strong></td>
+<td>文本的开始</td>
+</tr>
+<tr>
+<td><strong>$</strong></td>
+<td>文本的结尾</td>
+</tr>
+<tr>
+<td><strong>[[:&lt;:]]</strong></td>
+<td>词的开始</td>
+</tr>
+<tr>
+<td><strong>[[:&gt;:]]</strong></td>
+<td>词的结尾</td>
+</tr>
+</tbody></table>
+<p><code>例子：</code><strong>SELECT prod_name FROM products WHERE prod_name REGEXP ‘^[0-9\\\.]’ ORDER BY prod_name;</strong></p>
+<p><code>注1：</code><strong>^的双重作用</strong>，^有两种用法，在集合中，用它来否定集合，否则，用来指串的开始处.</p>
+<p><code>注2：</code><strong>使REGEXP起类似LIKE的作用</strong>，LIKE与REGEXP的不同在于，LIKE匹配整个串而REGEXP匹配子串，利用定位符，通过用^开始每个表达式，用$结束每个表达式，可以使REGEXP的作用与LIKE一样.</p>
+<p><code>注3：</code><strong>简单的正则表达式测试</strong>，可以在不使用数据表的情况下用SELECT来测试正则表达式。REGEXP检查总是返回0（没有匹配）或1（匹配）。可以用带文字串的REGEXP来测试表达式，并试验它们。</p>
+<hr>
+<h3 id="第十章-创建计算字段"><a href="#第十章-创建计算字段" class="headerlink" title="第十章 创建计算字段"></a>第十章 创建计算字段</h3>
             </div>
             <hr />
 
@@ -1190,7 +1355,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="《图解HTTP》-HTTP报文内的HTTP信息">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="《图解HTTP》-HTTP报文内的HTTP信息">
                         
                         <span class="card-title">《图解HTTP》-HTTP报文内的HTTP信息</span>
                     </div>
@@ -1239,7 +1404,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java并发编程(简介)">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="Java并发编程(简介)">
                         
                         <span class="card-title">Java并发编程(简介)</span>
                     </div>
@@ -1425,7 +1590,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">14.6k</span>
+            <span class="white-color">15.5k</span>
             
 
             <br>

@@ -489,14 +489,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    10 分
                 </div>
                 
                 
@@ -696,6 +696,85 @@
 <li>同一个类的不同对象的对象锁互不干扰</li>
 <li>类锁由于也是一种特殊的对象锁，因此表现和上述1、2、3、4一致，而由于一个类只有一把对象锁，所以同一个类的不同对象使用类锁将会是同步的</li>
 <li>类锁与对象锁互不干扰</li>
+</ul>
+<p><font size="6" color="red"><strong>synchronized底层实现原理</strong></font></p>
+<ul>
+<li>java对象头</li>
+<li>Monitor：每个java对象天生自带了一把看不见的锁</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>虚拟机位数</th>
+<th>对象头结构</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>32/64bit</td>
+<td>Mark Word</td>
+<td>默认存储对象的hashCode,分代年龄，锁类型、锁标志位等信息</td>
+</tr>
+<tr>
+<td>32/64bit</td>
+<td>Class Metadata Address</td>
+<td>类型指针指向对象的类元数据，JVM通过这个指针确定该对象是哪个类的数据</td>
+</tr>
+</tbody></table>
+<h5 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h5><ul>
+<li>许多情况下，共享数据的锁定状态持续时间较短，奇幻线程不值得</li>
+<li>通过让线程执行忙循环等待锁的释放，不让出CPU</li>
+<li>缺点：若锁被其他线程长时间占用，会带来许多性能上的开销</li>
+</ul>
+<h5 id="自适应自旋锁"><a href="#自适应自旋锁" class="headerlink" title="自适应自旋锁"></a>自适应自旋锁</h5><ul>
+<li>自旋的次数不再固定</li>
+<li>由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定</li>
+</ul>
+<h5 id="锁消除"><a href="#锁消除" class="headerlink" title="锁消除"></a>锁消除</h5><ul>
+<li>JIT编译时，对运行上下文进行扫描，取出不可能存在竞争的锁</li>
+</ul>
+<h5 id="锁粗化"><a href="#锁粗化" class="headerlink" title="锁粗化"></a>锁粗化</h5><ul>
+<li>通过扩大加锁的范围，避免反复加锁和解锁</li>
+</ul>
+<h5 id="synchronized的四种状态"><a href="#synchronized的四种状态" class="headerlink" title="synchronized的四种状态"></a>synchronized的四种状态</h5><ul>
+<li>无锁、偏向锁、轻量级锁、重量级锁</li>
+<li>锁膨胀方向：无锁——》偏向锁——》轻量级锁——》重量级锁</li>
+</ul>
+<h5 id="偏向锁：减少同一线程获取锁的代价"><a href="#偏向锁：减少同一线程获取锁的代价" class="headerlink" title="偏向锁：减少同一线程获取锁的代价"></a>偏向锁：减少同一线程获取锁的代价</h5><ul>
+<li><p>大多数情况下，锁不存在多线程竞争，总是由同一线程多次获得</p>
+</li>
+<li><p>核心思想：如果一个线程获得了锁，那么锁就进入偏向模式，此时Mark Word的结构也变为偏向锁结构，当该线程再次请求锁时，无需在做任何同步操作，及获取锁的过程只需要检查Mark Word的锁标记位为偏向锁以及当前线程ID等于Mark Word的ThreadID即可，这样就省去了大量有关锁申请的操作。</p>
+</li>
+<li><p>不适用于锁竞争比较激烈的多线程场合</p>
+<table>
+<thead>
+<tr>
+<th>锁</th>
+<th>优点</th>
+<th>缺点</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>偏向锁</td>
+<td>加锁和解锁不需要CAS操作，没有额外的性能消耗，和执行非同步方法相比存在纳秒级的差距</td>
+<td>如果线程间存在锁竞争，会带来额外的锁撤销的消耗</td>
+<td>只有一个线程访问同步块或者同步方法的场景</td>
+</tr>
+<tr>
+<td>轻量级锁</td>
+<td>竞争的线程不会阻塞，提高了响应速度</td>
+<td>若线程长时间抢不到锁，自旋会消耗CPU性能</td>
+<td>线程交替执行同步块或者同步方法的场景</td>
+</tr>
+<tr>
+<td>重量级锁</td>
+<td>线程竞争不使用自旋，不会消耗CPU</td>
+<td>线程阻塞，响应时间缓慢，在多线程下，频繁的获取释放锁，会带来巨大的性能消耗</td>
+<td>追求吞吐量，同步块或者同步方法执行时间较长的场景</td>
+</tr>
+</tbody></table>
+</li>
 </ul>
 
             </div>
@@ -1402,7 +1481,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">17.6k</span>
+            <span class="white-color">18.3k</span>
             
 
             <br>

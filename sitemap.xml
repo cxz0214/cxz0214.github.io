@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hello.alexxinzhe.co/2020/11/29/java-bing-fa-bian-cheng/</loc>
+    
+    <lastmod>2021-02-27T02:29:01.229Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hello.alexxinzhe.co/2021/01/30/redis/</loc>
+    
+    <lastmod>2021-02-25T14:37:31.562Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hello.alexxinzhe.co/2020/12/05/mysql-ji-chu-zhi-shi-zong-jie/</loc>
     
-    <lastmod>2021-02-08T12:27:01.423Z</lastmod>
+    <lastmod>2021-02-09T08:05:27.574Z</lastmod>
     
   </url>
   
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/2021/01/30/redis/</loc>
-    
-    <lastmod>2021-01-30T02:36:16.458Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hello.alexxinzhe.co/2021/01/07/guan-yu-sailvina-zhong-dan-bai-zhi-de-xia-zai-yu-shou-ti-ti-qu-de-shi-yong-jie-shao/</loc>
     
     <lastmod>2021-01-08T09:45:08.660Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hello.alexxinzhe.co/2020/11/29/java-bing-fa-bian-cheng/</loc>
-    
-    <lastmod>2021-01-04T04:50:21.681Z</lastmod>
     
   </url>
   
@@ -135,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://hello.alexxinzhe.co/archives/index.html</loc>
+    
+    <lastmod>2020-04-05T02:43:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hello.alexxinzhe.co/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
@@ -143,13 +150,6 @@
   
   <url>
     <loc>https://hello.alexxinzhe.co/tags/index.html</loc>
-    
-    <lastmod>2020-04-05T02:43:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hello.alexxinzhe.co/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

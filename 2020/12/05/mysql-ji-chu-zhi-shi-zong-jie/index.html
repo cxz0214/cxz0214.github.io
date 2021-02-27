@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -491,7 +491,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.9k
                 </div>
                 
 
@@ -885,7 +885,24 @@
 <p><code>注2：</code><strong>使REGEXP起类似LIKE的作用</strong>，LIKE与REGEXP的不同在于，LIKE匹配整个串而REGEXP匹配子串，利用定位符，通过用^开始每个表达式，用$结束每个表达式，可以使REGEXP的作用与LIKE一样.</p>
 <p><code>注3：</code><strong>简单的正则表达式测试</strong>，可以在不使用数据表的情况下用SELECT来测试正则表达式。REGEXP检查总是返回0（没有匹配）或1（匹配）。可以用带文字串的REGEXP来测试表达式，并试验它们。</p>
 <hr>
-<h3 id="第十章-创建计算字段"><a href="#第十章-创建计算字段" class="headerlink" title="第十章 创建计算字段"></a>第十章 创建计算字段</h3>
+<h3 id="第十章-创建计算字段"><a href="#第十章-创建计算字段" class="headerlink" title="第十章 创建计算字段"></a>第十章 创建计算字段</h3><h4 id="10-1-计算字段"><a href="#10-1-计算字段" class="headerlink" title="10.1 计算字段"></a>10.1 计算字段</h4><ul>
+<li><p>计算字段并不实际存在于数据库表中，计算机字段是运行时在<strong>SELECT语句</strong>内创建的.</p>
+</li>
+<li><p>只有数据库知道<strong>SELECT语句</strong>中那些列是实际的表列，那些列是计算字段。</p>
+</li>
+<li><p>可以在<strong>SQL语句</strong>内完成的许多转换和格式化工作都可以直接在客户机应用程序内完成.但一般来说，在数据库服务器上完成这些操作比在客户机中完成要快的多，因为DBMS是设计用来快速有效地完成这种处理的。</p>
+</li>
+</ul>
+<h4 id="10-2-拼接字段"><a href="#10-2-拼接字段" class="headerlink" title="10.2 拼接字段"></a>10.2 拼接字段</h4><ul>
+<li><strong>使用Concat()函数来拼接</strong></li>
+</ul>
+<p><code>例子:</code><strong>SELECT Concat(vend_name,’(‘,vend_country,’)’) FROM vendors ORDER BY vend_name;</strong></p>
+<ul>
+<li><strong>使用别名</strong></li>
+</ul>
+<p><code>说明:</code>SQL支持列别名。<strong>别名(alias)</strong>是一个字段或值得替换名。别名用<strong>AS</strong>关键字赋予.</p>
+<p><code>例子:</code> <strong>SELECT Concat(RTrim(vend_name),’(‘,RTrim(vend_country),’)’) <font color="red">AS  vend_title </font>FROM vendors ORDER BY vend_name;</strong></p>
+<h4 id="10-3-执行算术计算"><a href="#10-3-执行算术计算" class="headerlink" title="10.3 执行算术计算"></a>10.3 执行算术计算</h4>
             </div>
             <hr />
 
@@ -1355,7 +1372,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="《图解HTTP》-HTTP报文内的HTTP信息">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="《图解HTTP》-HTTP报文内的HTTP信息">
                         
                         <span class="card-title">《图解HTTP》-HTTP报文内的HTTP信息</span>
                     </div>
@@ -1404,7 +1421,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="Java并发编程(简介)">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java并发编程(简介)">
                         
                         <span class="card-title">Java并发编程(简介)</span>
                     </div>
@@ -1590,7 +1607,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">15.5k</span>
+            <span class="white-color">17.6k</span>
             
 
             <br>

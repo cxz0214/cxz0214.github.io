@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -489,14 +489,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    781
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
                 
@@ -577,6 +577,125 @@
 <li><strong>同步机制一直某些编译器的优化，是内存缓冲区中的数据无效，以及增加共享内存总线的同步流量</strong></li>
 </ul>
 </li>
+</ul>
+<h4 id="Thread中的start和run方法的区别"><a href="#Thread中的start和run方法的区别" class="headerlink" title="Thread中的start和run方法的区别"></a>Thread中的start和run方法的区别</h4><ul>
+<li>调用start()方法会创建一个新的子线程并启动</li>
+<li>run()方法只是Thread的一个普通方法的调用</li>
+</ul>
+<h4 id="Thread与Runnable的区别"><a href="#Thread与Runnable的区别" class="headerlink" title="Thread与Runnable的区别"></a>Thread与Runnable的区别</h4><ul>
+<li>Thread是实现了Runnable接口的类，使得run支持多线程</li>
+<li>因类的单一继承原则，推荐多使用Runnable接口</li>
+</ul>
+<h4 id="如何给run-方法传参"><a href="#如何给run-方法传参" class="headerlink" title="如何给run()方法传参"></a>如何给run()方法传参</h4><ul>
+<li>构造函数传参</li>
+<li>成员变量传参</li>
+<li>回调函数传参</li>
+</ul>
+<h4 id="如何实现处理线程的返回值"><a href="#如何实现处理线程的返回值" class="headerlink" title="如何实现处理线程的返回值"></a>如何实现处理线程的返回值</h4><ul>
+<li>主线程等待法</li>
+<li>使用Thread类的join()阻塞当前线程一等待子线程处理完毕</li>
+<li>通过Callable接口实现：通过FutureTask 或线程池获取</li>
+</ul>
+<h4 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h4><ul>
+<li>新建(New):创建后未启动的线程状态</li>
+<li>运行（Runnable):包含Running和Ready</li>
+<li>无限期等待(Waiting):不会被分配CPU执行时间，需要显示被唤醒<ul>
+<li>没有设置Timeout参数的Object.wait()方法</li>
+<li>没有设置TImeout参数的Thread.join()方法</li>
+<li>LockSupport.park()方法</li>
+</ul>
+</li>
+<li>限期等待(Timed Waiting)：在一定时间后会由系统自动唤醒<ul>
+<li>Thread.sleep()方法</li>
+<li>设置了Timeout参数的Object.wait()方法</li>
+<li>设置了Timeout参数的Thread.join()方法</li>
+<li>LockSupport.parkNanos()方法</li>
+<li>LockSupport.parkUntil()方法</li>
+</ul>
+</li>
+<li>阻塞(Blocked):等待获取排它锁</li>
+<li>结束(Terminated):已终止线程的状态，线程已经结束执行</li>
+</ul>
+<h4 id="sleep和wait的区别"><a href="#sleep和wait的区别" class="headerlink" title="sleep和wait的区别"></a>sleep和wait的区别</h4><ul>
+<li>基本差别<ul>
+<li>sleep是Thread类的方法，wait是Object类中定义的方法</li>
+<li>sleep()方法可以在任何地方使用</li>
+<li>wait()方法只能在synchronized方法或synchronized块中使用</li>
+</ul>
+</li>
+<li>最主要的本质区别<ul>
+<li>Thread.sleep()只会让出CPU，不会导致锁行为的改变</li>
+<li>Object.wait()不仅让出CPU，还会释放已经占有的同步资源锁</li>
+</ul>
+</li>
+</ul>
+<h4 id="notify和notifyAll的区别"><a href="#notify和notifyAll的区别" class="headerlink" title="notify和notifyAll的区别"></a>notify和notifyAll的区别</h4><p>两个概念</p>
+<ul>
+<li><p>锁池EntryList</p>
+<ul>
+<li>假设线程A已经拥有了某个对象(不是类)的锁，而其它线程B、C想要调用这个对象的某个synchronized方法(或者块),由于B、C线程在进入对象的synchronized方法(或块)之前必须先获得该对象锁的拥有权，而恰巧该对象的锁目前正被线程A锁占用，此时B、C线程就会阻塞，进入一个地方去等待锁的释放，这个地方就是锁池.</li>
+</ul>
+</li>
+<li><p>等待池WaitSet</p>
+<ul>
+<li>假设线程A调用了某个对象的wait()方法，线程A就会释放该对象的锁，同时线程A就进入到了该对象的等待池中，进入到等待池中的线程不会去竞争该对象的锁</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>notifyAll会让所有处于等待池的线程全部进入锁池去竞争获取锁的机会</li>
+<li>notify只会随机选取一个处于等待池中的线程进入锁池去竞争获取锁的机会</li>
+</ul>
+<h4 id="如何中断线程"><a href="#如何中断线程" class="headerlink" title="如何中断线程"></a>如何中断线程</h4><p>已被抛弃的方法</p>
+<ul>
+<li>通过调用stop()方法停止线程</li>
+<li>通过suspend()和resume()方法</li>
+</ul>
+<p>目前使用的方法</p>
+<ul>
+<li><p>调用Interrupt(),通知线程应该中断了</p>
+<ul>
+<li>如果线程处于被阻塞状态，那么线程将立即退出被阻塞状态，并抛出一个InterruptedException异常</li>
+<li>如果线程处于正常活动状态，那么会将该线程的中断标志设置为true.被设置中断标志的线程将继续正常运行，不受影响。</li>
+</ul>
+</li>
+<li><p>需要被调用的线程配合中断</p>
+<ul>
+<li>在正常运行任务时，经常检查本线程的中断标志位，如果被设置了中断标志就自动停止线程</li>
+<li>如果线程处于正常活动状态，那么会将该线程的中断标志设置为true.被设置中断标志的线程将继续正常运行，不受影响。</li>
+</ul>
+</li>
+</ul>
+<h4 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h4><p>线程安全的主要诱因</p>
+<ul>
+<li>存在共享数据(也称临界资源)</li>
+<li>存在多条线程共同操作这些共享数据</li>
+</ul>
+<p>互斥锁的特性</p>
+<ul>
+<li>互斥性：即在同一时间只允许线程持有某个对象锁，通过这种特性来实现多线程的协调机制，这样在同一时间只有一个线程对需要同步的代码块(复合操作)进行访问。互斥性也称为操作的原子性。</li>
+<li>可见性：必须确保在锁被释放之前，对共享变量锁做的修改，对于随后获得该锁的另一个线程是可见的(即在获得锁是应获得最新共享变量的值，否则另一个线程可能是在本地缓存的某个副本上继续操作，从而引起不一致。)</li>
+</ul>
+<p><font color="red"><strong>synchronized 锁的不是代码，锁的是对象</strong></font></p>
+<p>根据获取的锁的分类:获取对象锁和获取类锁</p>
+<p>获取对象锁的两种方法:</p>
+<ul>
+<li>同步代码块(synchronized(this),synchronized(类实例对象),锁是小括号()中的实例对象).</li>
+<li>同步非静态方法(synchronized method)，锁是当前对象的实例对象</li>
+</ul>
+<p>获取类锁的两种方法:</p>
+<ul>
+<li>同步代码块(synchronized(类.class)),锁是小括号()中的类对象(Class对象)</li>
+<li>同步静态方法(synchronized static method),锁是当前对象的类对象(Class对象)</li>
+</ul>
+<h4 id="对象锁和类锁的总结"><a href="#对象锁和类锁的总结" class="headerlink" title="对象锁和类锁的总结"></a>对象锁和类锁的总结</h4><ul>
+<li>有线程访问对象的同步代码块时，另外的线程可以访问该对象的非同步代码块</li>
+<li>若锁住的是同一个对象，一个线程在访问对象的同步代码块时，另一个访问对象的同步代码块的线程会被阻塞</li>
+<li>若锁住的是同一个对象，一个线程在访问对象的同步方法时，另一个访问对象的同步方法的线程会被阻塞</li>
+<li>若锁住的是同一个对象，一个线程在访问对象的同步代码块时，另一个访问对象的同步方法的线程会被阻塞，反之亦然.</li>
+<li>同一个类的不同对象的对象锁互不干扰</li>
+<li>类锁由于也是一种特殊的对象锁，因此表现和上述1、2、3、4一致，而由于一个类只有一把对象锁，所以同一个类的不同对象使用类锁将会是同步的</li>
+<li>类锁与对象锁互不干扰</li>
 </ul>
 
             </div>
@@ -1048,7 +1167,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Mysql基础知识总结">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Mysql基础知识总结">
                         
                         <span class="card-title">Mysql基础知识总结</span>
                     </div>
@@ -1097,7 +1216,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="java基础知识点">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="java基础知识点">
                         
                         <span class="card-title">java基础知识点</span>
                     </div>
@@ -1283,7 +1402,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">15.5k</span>
+            <span class="white-color">17.6k</span>
             
 
             <br>

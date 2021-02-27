@@ -8,7 +8,18 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="Redis | 秃头的晨曦">
+    <meta name="description" content="Redis数据结构简介
+
+
+结构类型
+结构存储的值
+结构的读写能力
+
+
+
+STRING
+可以是字符串、整数或者浮点数
+对整个字符串或者字符串的其中一部分执行操作；对整数和浮点数执行自增（increment)或者自减（decrement）操作">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -329,7 +340,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -471,7 +482,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    322
                 </div>
                 
 
@@ -494,7 +505,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h4 id="Redis数据结构简介"><a href="#Redis数据结构简介" class="headerlink" title="Redis数据结构简介"></a>Redis数据结构简介</h4><table>
+<thead>
+<tr>
+<th>结构类型</th>
+<th>结构存储的值</th>
+<th>结构的读写能力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>STRING</strong></td>
+<td>可以是字符串、整数或者浮点数</td>
+<td>对整个字符串或者字符串的其中一部分执行操作；对整数和浮点数执行自增（increment)或者自减（decrement）操作</td>
+</tr>
+<tr>
+<td><strong>LIST</strong></td>
+<td>一个链表，链表上的每个节点都包含了一个字符串</td>
+<td>从链表的两端推入或弹出元素；根据偏移量对链表进行修剪(trim)；读取单个或者多个元素；根据值查找或者移除元素</td>
+</tr>
+<tr>
+<td><strong>SET</strong></td>
+<td>包含字符串的无序收集器(unordered collection),并且被包含的每个字符串都是独一无二、各不相同的</td>
+<td>添加、获取、移除单个元素；检查一个元素是否存在于集合中；计算交集、并集、差集；从集合里面随机获取元素</td>
+</tr>
+<tr>
+<td><strong>HASH</strong></td>
+<td>包含键值对的无序散列表</td>
+<td>添加、获取、移除单个键值对；获取所有键值对</td>
+</tr>
+<tr>
+<td><strong>ZSET（有序集合）</strong></td>
+<td>字符串成员(member)与浮点数分值(score)之间的有序映射，元素的排序顺序由分值的大小决定</td>
+<td>添加、获取、删除单个元素；根据分值范围(range)或者成员来获取元素</td>
+</tr>
+</tbody></table>
+
             </div>
             <hr />
 
@@ -964,7 +1009,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Photoshop2021安装包">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Photoshop2021安装包">
                         
                         <span class="card-title">Photoshop2021安装包</span>
                     </div>
@@ -1007,7 +1052,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="关于SailVina中蛋白质的下载与受体提取的使用介绍">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="关于SailVina中蛋白质的下载与受体提取的使用介绍">
                         
                         <span class="card-title">关于SailVina中蛋白质的下载与受体提取的使用介绍</span>
                     </div>
@@ -1212,7 +1257,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">15.5k</span>
+            <span class="white-color">17.6k</span>
             
 
             <br>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hello.alexxinzhe.co/2021/02/02/photoshop2021-an-zhuang-bao/</loc>
+    
+    <lastmod>2021-02-27T12:37:40.574Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hello.alexxinzhe.co/2020/11/29/java-bing-fa-bian-cheng/</loc>
     
     <lastmod>2021-02-27T12:35:32.421Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://hello.alexxinzhe.co/2020/12/05/mysql-ji-chu-zhi-shi-zong-jie/</loc>
     
     <lastmod>2021-02-09T08:05:27.574Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hello.alexxinzhe.co/2021/02/02/photoshop2021-an-zhuang-bao/</loc>
-    
-    <lastmod>2021-02-02T03:11:40.846Z</lastmod>
     
   </url>
   
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/categories/index.html</loc>
+    <loc>https://hello.alexxinzhe.co/archives/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hello.alexxinzhe.co/archives/index.html</loc>
+    <loc>https://hello.alexxinzhe.co/categories/index.html</loc>
     
     <lastmod>2020-04-05T02:43:43.000Z</lastmod>
     

@@ -4,20 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="类图, 热爱生活 学习 宅">
+    <meta name="keywords" content="Spring框架, 热爱生活 学习 宅">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="类图绘制网站PlantUML泛化关系(Generalization)
-用来描述继承关系，在 Java 中使用 extends 关键字。
-
-
-@startuml
-
-title Generalization
-
-class Vihical
-cla">
+    <meta name="description" content="你了解Spring IOC吗？IOC(Inversion of Control):
+依赖注入的方式
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +18,7 @@ cla">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>类图 | 秃头的晨曦</title>
+    <title>Spring框架 | 秃头的晨曦</title>
     <link rel="icon" type="image/png" href="/medias/avatars/头像.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -338,13 +331,13 @@ cla">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        类图
+                        Spring框架
                     </div>
                 </div>
             </div>
@@ -455,8 +448,8 @@ cla">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/软件工程/" target="_blank">
-                            <span class="chip bg-color">软件工程</span>
+                        <a href="/tags/Spring/" target="_blank">
+                            <span class="chip bg-color">Spring</span>
                         </a>
                         
                     </div>
@@ -464,22 +457,13 @@ cla">
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/软件工程/" class="post-category" target="_blank">
-                            软件工程
-                        </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-27
+                    2021-03-02
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -493,7 +477,7 @@ cla">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    39
+                    17
                 </div>
                 
 
@@ -516,117 +500,8 @@ cla">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="类图绘制网站PlantUML"><a href="#类图绘制网站PlantUML" class="headerlink" title="类图绘制网站PlantUML"></a>类图绘制网站<a href="https://www.planttext.com/" target="_blank" rel="noopener">PlantUML</a></h3><h4 id="泛化关系-Generalization"><a href="#泛化关系-Generalization" class="headerlink" title="泛化关系(Generalization)"></a>泛化关系(Generalization)</h4><ul>
-<li>用来描述继承关系，在 Java 中使用 <strong>extends</strong> 关键字。</li>
-</ul>
-<p><img src="https://www.pdai.tech/_images/pics/SoWkIImgAStDuU8goIp9ILLmJyrBBKh.png" alt="泛化关系"></p>
-<pre class="line-numbers language-sh"><code class="language-sh">@startuml
-
-title Generalization
-
-class Vihical
-class Car
-class Trunck
-
-Vihical <|-- Car
-Vihical <|-- Trunck
-
-@enduml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="实现关系-Realization"><a href="#实现关系-Realization" class="headerlink" title="实现关系(Realization)"></a>实现关系(Realization)</h4><ul>
-<li>用来实现一个接口，在 Java 中使用 <strong>implement</strong> 关键字。</li>
-</ul>
-<p><img src="https://www.pdai.tech/_images/pics/SoWkIImgAStDuU8goIp9ILK8IatCoQn.png" alt="实现关系"></p>
-<pre class="line-numbers language-sh"><code class="language-sh">@startuml
-
-title Realization
-
-interface MoveBehavior
-class Fly
-class Run
-
-MoveBehavior <|.. Fly
-MoveBehavior <|.. Run
-
-@enduml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="聚合关系-Aggregation"><a href="#聚合关系-Aggregation" class="headerlink" title="聚合关系(Aggregation)"></a>聚合关系(Aggregation)</h4><ul>
-<li>表示整体由部分组成，但是整体和部分不是强依赖的，整体不存在了部分还是会存在。</li>
-</ul>
-<p><img src="https://www.pdai.tech/_images/pics/SoWkIImgAStDuU8goIp9ILLmJ4ylIar.png" alt="聚合关系"></p>
-<pre class="line-numbers language-sh"><code class="language-sh">@startuml
-
-title Aggregation
-
-class Computer
-class Keyboard
-class Mouse
-class Screen
-
-Computer o-- Keyboard
-Computer o-- Mouse
-Computer o-- Screen
-
-@enduml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="组合关系-Composition"><a href="#组合关系-Composition" class="headerlink" title="组合关系(Composition)"></a>组合关系(Composition)</h4><ul>
-<li>和聚合不同，组合中整体和部分是强依赖的，整体不存在了部分也不存在了。比如公司和部门，公司没了部门就不存在了。但是公司和员工就属于聚合关系了，因为公司没了员工还在。</li>
-</ul>
-<p><img src="https://www.pdai.tech/_images/pics/SoWkIImgAStDuU8goIp9ILLmpiyjo2_.png" alt="组合关系"></p>
-<pre class="line-numbers language-sh"><code class="language-sh">@startuml
-
-title Composition
-
-class Company
-class DepartmentA
-class DepartmentB
-
-Company *-- DepartmentA
-Company *-- DepartmentB
-
-@enduml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="关联关系-Association"><a href="#关联关系-Association" class="headerlink" title="关联关系(Association)"></a>关联关系(Association)</h4><ul>
-<li>表示不同类对象之间有关联，这是一种静态关系，与运行过程的状态无关，在最开始就可以确定。因此也可以用 1 对 1、多对 1、多对多这种关联关系来表示。比如学生和学校就是一种关联关系，一个学校可以有很多学生，但是一个学生只属于一个学校，因此这是一种多对一的关系，在运行开始之前就可以确定。</li>
-</ul>
-<p><img src="https://www.pdai.tech/_images/pics/SoWkIImgAStDuU8goIp9ILLmB2xEJyv.png" alt="关联关系"></p>
-<pre class="line-numbers language-sh"><code class="language-sh">@startuml
-
-title Association
-
-class School
-class Student
-
-School "1" - "n" Student
-
-@enduml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="依赖关系-Dependency"><a href="#依赖关系-Dependency" class="headerlink" title="依赖关系(Dependency)"></a>依赖关系(Dependency)</h4><ul>
-<li>和关联关系不同的是，依赖关系是在运行过程中起作用的。A 类和 B 类是依赖关系主要有三种形式:<ul>
-<li>A 类是 B 类中的(某中方法的)局部变量；</li>
-<li>A 类是 B 类方法当中的一个参数；</li>
-<li>A 类向 B 类发送消息，从而影响 B 类发生变化；</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://www.pdai.tech/_images/pics/LOun2W9134NxVugmbJPp15d4LalxC4O.png" alt="依赖关系"></p>
-<pre class="line-numbers language-sh"><code class="language-sh">@startuml
-
-title Dependency
-
-class Vihicle {
-    move(MoveBehavior)
-}
-
-interface MoveBehavior {
-    move()
-}
-
-note "MoveBehavior.move()" as N
-
-Vihicle ..> MoveBehavior
-
-Vihicle .. N
-
-@enduml
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<p><code>声明</code>：内容转自大佬博客<a href="https://www.pdai.tech/md/java/basic/java-basic-oop.html" target="_blank" rel="noopener">Java全栈知识体系</a></p>
+                <h4 id="你了解Spring-IOC吗？"><a href="#你了解Spring-IOC吗？" class="headerlink" title="你了解Spring IOC吗？"></a>你了解Spring IOC吗？</h4><p><strong>IOC(Inversion of Control):</strong></p>
+<p><font color="red"><strong>依赖注入的方式</strong></font></p>
 
             </div>
             <hr />
@@ -785,9 +660,9 @@ Vihicle .. N
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《类图》
+                    《Spring框架》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/11/27/lei-tu/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/03/02/spring-kuang-jia/" property="cc:attributionName"
                rel="cc:attributionURL">
                 陈歆哲
             </a> 采用
@@ -1089,46 +964,41 @@ Vihicle .. N
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/27/java-ji-chu-zhi-shi-dian/">
+                <a href="/2021/03/02/spring-kuang-jia/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="java基础知识点">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Spring框架">
                         
-                        <span class="card-title">java基础知识点</span>
+                        <span class="card-title">Spring框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对java中个别基础知识点的总结
+                            Sping框架
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-02
+                            </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/java/" class="post-category" target="_blank">
-                                    java
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/" target="_blank">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/Spring/" target="_blank">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
                 </div>
@@ -1142,33 +1012,26 @@ Vihicle .. N
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/24/jie-kou-lambda-biao-da-shi-yu-nei-bu-lei/">
+                <a href="/2021/02/28/shu-ju-ku-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="函数式编程">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数据库笔记">
                         
-                        <span class="card-title">函数式编程</span>
+                        <span class="card-title">数据库笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            java中的函数式编程
+                            数据库课堂笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-11-24
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-28
                             </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java基础/" class="post-category" target="_blank">
-                                    Java基础
-                                </a>
-                            
                             
                         </span>
                     </div>
@@ -1176,8 +1039,8 @@ Vihicle .. N
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java基础/" target="_blank">
-                        <span class="chip bg-color">Java基础</span>
+                    <a href="/tags/数据库/" target="_blank">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
@@ -1323,6 +1186,25 @@ Vihicle .. N
     
 
 </main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 
     <footer class="page-footer bg-color">

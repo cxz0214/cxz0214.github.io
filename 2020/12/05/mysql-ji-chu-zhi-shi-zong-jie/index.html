@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -491,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    14 分
                 </div>
                 
                 
@@ -902,7 +902,104 @@
 </ul>
 <p><code>说明:</code>SQL支持列别名。<strong>别名(alias)</strong>是一个字段或值得替换名。别名用<strong>AS</strong>关键字赋予.</p>
 <p><code>例子:</code> <strong>SELECT Concat(RTrim(vend_name),’(‘,RTrim(vend_country),’)’) <font color="red">AS  vend_title </font>FROM vendors ORDER BY vend_name;</strong></p>
-<h4 id="10-3-执行算术计算"><a href="#10-3-执行算术计算" class="headerlink" title="10.3 执行算术计算"></a>10.3 执行算术计算</h4>
+<h4 id="10-3-执行算术计算"><a href="#10-3-执行算术计算" class="headerlink" title="10.3 执行算术计算"></a>10.3 执行算术计算</h4><hr>
+<h3 id="第二十一章-创建和操纵表"><a href="#第二十一章-创建和操纵表" class="headerlink" title="第二十一章 创建和操纵表"></a>第二十一章 创建和操纵表</h3><h4 id="21-1-创建表"><a href="#21-1-创建表" class="headerlink" title="21.1 创建表"></a>21.1 创建表</h4><p>为了利用<strong>CREATE TABLE</strong>创建表，必须给出下列信息:</p>
+<ul>
+<li>新表的名字，在关键字<em><em>CREATE TABLE </em></em>之后给出</li>
+<li>表列的名字和定义，用逗号隔开</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">CREATE TABLE customers # IF NOT EXISTS(如果不存在才创建)
+(
+    cust_id          int          NOT NULL AUTO_INCREMENT # DEFAULT 1(可以指定默认值),
+    cust_name        char(50)     NOT NULL,
+    cust_address     char(50)     NULL,
+    cust_city        char(50)     NULL,
+    cust_state       char(50)     NULL,
+    cust_zip         char(10)     NULL,
+    cust_country     char(50)     NULL,
+    cust_contact     char(50)     NULL,
+    cust_email       char(255)    NULL,
+    PRIMARY KEY(cust_id)
+)ENGINE=InnoDB;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><font color="red"><strong>主键中只能使用不允许NULL值的列，允许NULL值的列不能作为唯一标识</strong></font></p>
+<p><font color="red"><strong>每个表只允许一个AUTO_INCREAMENT列，而且他必须被索引(如，通过使它成为主键)</strong></font></p>
+<p><strong>与大多数DBMS不一样，Mysql不允许使用函数作为默认值，它只支持常量</strong></p>
+<p><strong><font color="red">使用默认值而不是NULL值</font> 许多数据库开发人员使用默认值而不是NULL列，特别是对用与计算数据分组的列更是如此。</strong></p>
+<p><strong>引擎：</strong></p>
+<ul>
+<li>InnoDB是一个可靠的事务处理引擎，它不支持全文本搜索；</li>
+<li>MEMORY在功能等同于MyISAM,但由于数据存储在内存中，速度很快(特别适合于临时表)</li>
+<li>MyISAM是一个性能极高的引擎，它支持全文本搜索，但不支持事务处理</li>
+</ul>
+<p><code>注：</code><strong>外键不能跨引擎</strong>  使用一个引擎的表不能引用具有使用不同引擎的表的外键</p>
+<h4 id="21-2-更新表"><a href="#21-2-更新表" class="headerlink" title="21.2 更新表"></a>21.2 更新表</h4><p>为了使用<strong>ALTER TABLE</strong>更改表结构，必须给出下面的信息:</p>
+<ul>
+<li>在<strong>ALTER TABLE</strong>之后给出要更改的表名(该表必须存在，否则将出错)</li>
+<li>所做更改的列表</li>
+</ul>
+<p><code>例子</code></p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">#给表添加一列
+ALTER TABLE vendors  
+ADD vend_phone CHAR(20); 
+
+#给表删除列
+ALTER TABLE Vendors
+DROP COLUMN vend_phone;
+
+#ALTER TABLE 的一种常见用途是定义外键 
+ALTER TABLE orderitems
+ADD CONSTRAINT fk_orderitems_orders
+FOREIGN KEY (order_num) REFERUNCES orders (order_num);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="21-3-删除表"><a href="#21-3-删除表" class="headerlink" title="21.3 删除表"></a>21.3 删除表</h4><p><code>例子</code></p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">DROP TABLE customers2;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="21-4-重命名表"><a href="#21-4-重命名表" class="headerlink" title="21.4 重命名表"></a>21.4 重命名表</h4><p><code>例子</code></p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">RENAME TABLE backup_customers TO customers,
+             backup_vendors   TO vendors,
+             backup_products  TO products;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="第二十六章-管理实务处理"><a href="#第二十六章-管理实务处理" class="headerlink" title="第二十六章 管理实务处理"></a>第二十六章 管理实务处理</h3><h4 id="26-1-事务处理"><a href="#26-1-事务处理" class="headerlink" title="26.1 事务处理"></a>26.1 事务处理</h4><p><font color="red"><strong>并非所有引擎都支持事务处理</strong></font></p>
+<p>事务处理(transaction processiong)可以用来维护数据库的完整性，它保证成批的Mysql操作<strong>要么完全执行，要么完全不执行</strong>.</p>
+<p><strong>几个术语</strong></p>
+<p><strong>事务(transaction):</strong>指一组SQL语句</p>
+<p><strong>回退(rollback):</strong>指撤销指定SQL语句的过程</p>
+<p><strong>提交(commit):</strong>指将为存储的SQL语句结果写入数据库表</p>
+<p><strong>保留点(savepoint):</strong>指事务处理中设置的临时占位符(place-holder),你可以对它发布回退(与回退整个事务处理不同)。</p>
+<h4 id="26-2-控制事务处理"><a href="#26-2-控制事务处理" class="headerlink" title="26.2 控制事务处理"></a>26.2 控制事务处理</h4><ul>
+<li><font color="red" size="4"><strong>使用ROLLBACK</strong></font></li>
+</ul>
+<p><code>例子:</code></p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">SELECT * FROM ordertotals;
+START TRANSACTION;
+DELETE FROM ordertotals;
+SELECT * FROM ordertotals;
+ROLLBACK;
+SELECT * FORM ordertotals;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>那些语句可以回退？</strong></p>
+<p>​    事务处理用来管理<strong>INSERT、UPDATE和DELETE语句</strong>。你不能回退SELECT语句。不能回退CREATE或DROP操作。事务处理块中可以使用这两条语句，但是如果你执行回退，它们不会撤销。</p>
+<ul>
+<li><font color="red" size="4"><strong>使用COMMIT</strong></font></li>
+</ul>
+<p>​    一般的mysql语句都是直接针对数据库表执行和编写的。这就是所谓的<strong>隐含提交(implicit commit)</strong>,即提交(写或保存)操作时自动进行的。但是，在事务处理块中，提交不会隐含地进行。为了进行明确的提交，使用<strong>COMMIT语句</strong>。</p>
+<p><code>例子：</code></p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">START TRANSACTION;
+DELETE FROM orderitems WHERE order_num = 20010;
+DELETE FROM orders WHERE order_num = 20010;
+COMMIT;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><font color="red" size="4"><strong>使用保留点</strong></font></li>
+</ul>
+<p>​     为了支持回退部分事务处理，必须能在事务处理块中合适的位置放置占位符，这样如果需要回退，可以回退到某个占位符。这些占位符称为<strong>保留点</strong></p>
+<pre class="line-numbers language-mysql"><code class="language-mysql">SAVEPOINT delete1;
+
+ROLLBACK TO delete1;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong>释放保留点</strong> 保留点在事务处理完成(执行一条ROLLBACK或COMMIT)后自动释放。自mysql 5 以来，也可以用<strong>RELEASE SAVEPOINT</strong> 明确的释放保留点</p>
+<ul>
+<li><p><strong>更改默认的提交行为</strong></p>
+<p> <strong>默认的mysql行为是自动提交所有更改</strong></p>
+</li>
+</ul>
+<pre class="line-numbers language-mysql"><code class="language-mysql">SET autocommit = 0;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
             </div>
             <hr />
 
@@ -1372,7 +1469,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="《图解HTTP》-HTTP报文内的HTTP信息">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="《图解HTTP》-HTTP报文内的HTTP信息">
                         
                         <span class="card-title">《图解HTTP》-HTTP报文内的HTTP信息</span>
                     </div>
@@ -1421,7 +1518,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Java并发编程(简介)">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java并发编程(简介)">
                         
                         <span class="card-title">Java并发编程(简介)</span>
                     </div>
@@ -1607,7 +1704,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">18.9k</span>
+            <span class="white-color">20k</span>
             
 
             <br>

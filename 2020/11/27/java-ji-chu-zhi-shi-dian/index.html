@@ -334,7 +334,7 @@ Integer.valueOf() 会使用缓存池中的对象，多次调用会取得同一�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -489,7 +489,7 @@ Integer.valueOf() 会使用缓存池中的对象，多次调用会取得同一�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -663,6 +663,22 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 </li>
 </ul>
 <p><font color="red" size="5"><strong>java集合框架</strong></font></p>
+<p><font color="red"><strong>HashMap、HashTable、ConccurentHashMap</strong></font></p>
+<p>HashMap(<strong>java8以前</strong>):<strong>数组+链表</strong></p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+     * The default initial capacity - MUST be a power of two.
+     */</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> DEFAULT_INITIAL_CAPACITY <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// aka 16</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>HashMap(<font color="red"><strong>java8以后</strong></font>):<strong>数组+链表+红黑树</strong></p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+     * The bin count threshold for using a tree rather than list for a
+     * bin.  Bins are converted to trees when adding an element to a
+     * bin with at least this many nodes. The value must be greater
+     * than 2 and should be at least 8 to mesh with assumptions in
+     * tree removal about conversion back to plain bins upon
+     * shrinkage.
+     */</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> TREEIFY_THRESHOLD <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1133,7 +1149,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Java并发编程(简介)">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java并发编程(简介)">
                         
                         <span class="card-title">Java并发编程(简介)</span>
                     </div>
@@ -1182,7 +1198,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="类图">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="类图">
                         
                         <span class="card-title">类图</span>
                     </div>
@@ -1368,7 +1384,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">18.9k</span>
+            <span class="white-color">20k</span>
             
 
             <br>

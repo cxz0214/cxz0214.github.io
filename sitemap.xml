@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hello.alexxinzhe.co/2021/03/02/spring-kuang-jia/</loc>
+    
+    <lastmod>2021-03-02T12:55:43.149Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hello.alexxinzhe.co/2020/12/05/mysql-ji-chu-zhi-shi-zong-jie/</loc>
+    
+    <lastmod>2021-03-02T01:15:37.016Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hello.alexxinzhe.co/2020/11/27/java-ji-chu-zhi-shi-dian/</loc>
     
-    <lastmod>2021-02-28T08:39:17.922Z</lastmod>
+    <lastmod>2021-02-28T15:18:57.622Z</lastmod>
     
   </url>
   
@@ -33,13 +47,6 @@
     <loc>https://hello.alexxinzhe.co/2021/01/30/redis/</loc>
     
     <lastmod>2021-02-25T14:37:31.562Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hello.alexxinzhe.co/2020/12/05/mysql-ji-chu-zhi-shi-zong-jie/</loc>
-    
-    <lastmod>2021-02-09T08:05:27.574Z</lastmod>
     
   </url>
   

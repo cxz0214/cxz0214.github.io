@@ -1,0 +1,93 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+
+h5#site-title {
+    font-family: 'Zhi Mang Xing', cursive;
+} */
+
+@font-face{
+    font-family:'Ns' ;  /* 字体名自定义即可 */
+    src:url('../fonts/NotoSerifSC-SemiBold.otf'); /* 字体文件路径 */
+    font-display : swap;
+}
+
+h1#site-title {
+    font-family: 'Ns', sans-serif;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Ns',sans-serif;
+}
+
+/*设置鼠标样式*/
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+
+
+#footer {
+    background: rgba(255,255,255,.15);
+    color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    backdrop-filter: saturate(100%) blur(5px)
+}
+
+#footer::before {
+    background: rgba(255,255,255,.15)
+}
+
+#footer #footer-wrap {
+    color: var(--font-color)
+}
+
+#footer #footer-wrap a {
+    color: var(--font-color)
+}
+
+#aside-content .card-widget {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    background: var(--card-bg);
+    box-shadow: var(--card-box-shadow);
+    transition: box-shadow 0.3s ease 0s;
+}
+
+#aside-content #card-toc .toc-content .toc-link.active {
+    font-weight: 700;
+    border-radius: 8px;
+    color: var(--second);
+    border-left-color: var(--main);
+    background-color: var(--main);
+    box-shadow: var(--main-shadow);
+}
+
+.tk-comments-container > .tk-comment {
+    background: var(--heo-card-bg);
+    transition: all 0.3s ease 0s;
+    border-radius: 12px;
+    padding: 1.5rem 10px 10px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: var(--style-border-dashed);
+    margin-top: 0px !important;
+    margin-bottom: 0.5rem !important;
+}
+.tk-comment {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    word-break: break-all;
+}
+
+

@@ -1,9 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
-
-h5#site-title {
-    font-family: 'Zhi Mang Xing', cursive;
-} */
-
 @font-face{
     font-family:'Ns' ;  /* 字体名自定义即可 */
     src:url('../fonts/NotoSerifSC-SemiBold.otf'); /* 字体文件路径 */
@@ -89,5 +83,3 @@ a,img {
     flex-direction: row;
     word-break: break-all;
 }
-
-

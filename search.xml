@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Git学习</title>
+      <link href="/2022/10/16/Git%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2022/10/16/Git%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h1><h2 id="一、版本控制-VCS"><a href="#一、版本控制-VCS" class="headerlink" title="一、版本控制(VCS)"></a>一、版本控制(VCS)</h2><p>​版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p><pre><code> &#123;% radio yellow, 传闻恶补测试 %&#125;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vim学习</title>
       <link href="/2022/10/14/Vim%E5%AD%A6%E4%B9%A0/"/>
       <url>/2022/10/14/Vim%E5%AD%A6%E4%B9%A0/</url>

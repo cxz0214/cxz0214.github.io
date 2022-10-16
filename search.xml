@@ -8,7 +8,7 @@
       <link href="/2022/10/16/Git%E5%AD%A6%E4%B9%A0/"/>
       <url>/2022/10/16/Git%E5%AD%A6%E4%B9%A0/</url>
       
-        <content type="html"><![CDATA[<h1 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h1><h2 id="一、版本控制-VCS"><a href="#一、版本控制-VCS" class="headerlink" title="一、版本控制(VCS)"></a>一、版本控制(VCS)</h2><p>​版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p><pre><code> &#123;% radio yellow, 传闻恶补测试 %&#125;</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h1><h2 id="一、版本控制-VCS"><a href="#一、版本控制-VCS" class="headerlink" title="一、版本控制(VCS)"></a>一、版本控制(VCS)</h2><p>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p><h3 id="本地版本控制系统"><a href="#本地版本控制系统" class="headerlink" title="本地版本控制系统"></a>本地版本控制系统</h3><h3 id="集中化的版本控制系统-CVCS"><a href="#集中化的版本控制系统-CVCS" class="headerlink" title="集中化的版本控制系统(CVCS)"></a>集中化的版本控制系统(CVCS)</h3><p>这类系统，诸如 CVS、Subversion 以及 Perforce 等，都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新.</p>]]></content>
       
       
       

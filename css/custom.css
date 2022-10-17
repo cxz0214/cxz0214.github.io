@@ -83,3 +83,14 @@ a,img {
     flex-direction: row;
     word-break: break-all;
 }
+
+.post p{
+  text-indent: 2rem;
+}
+
+.post blockquote p {
+    text-indent: 0rem;
+}
+.post ul li p{
+    text-indent: 0rem;
+}

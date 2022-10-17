@@ -1359,6 +1359,9 @@ canvas:not(#ribbon-canvas),
   --pseudo-hover: #ff7242;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #49b1f5;
+  --second: #fff;
+  --main: #49b1f5;
+  --main-shadow: 0 8px 12px -3px rgba(73,177,245,0.2);
 }
 body {
   position: relative;

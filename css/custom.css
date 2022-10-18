@@ -1,16 +1,16 @@
-@font-face{
+/* @font-face{
     font-family:'Ns' ;  /* 字体名自定义即可 */
     src:url('../fonts/NotoSerifSC-SemiBold.otf'); /* 字体文件路径 */
     font-display : swap;
-}
+} */
 
-h1#site-title {
+/* h1#site-title {
     font-family: 'Ns', sans-serif;
-}
+} */
 
 body{
     font-size: 15px;
-    font-family: 'Ns',sans-serif;
+    /* font-family: 'Ns',sans-serif; */
 }
 
 /*设置鼠标样式*/
@@ -92,5 +92,9 @@ a,img {
     text-indent: 0rem;
 }
 .post ul li p{
+    text-indent: 0rem;
+}
+
+.tk-comments-container p{
     text-indent: 0rem;
 }

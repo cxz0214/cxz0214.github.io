@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Markdown基本语法总结 | MorningLightCode</title><meta name="keywords" content="Markdown"><meta name="author" content="晨曦"><meta name="copyright" content="晨曦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="介绍了Markdown的基本用法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown基本语法总结">
+<meta property="og:url" content="http://example.com/2022/01/21/Markdown%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="MorningLightCode">
+<meta property="og:description" content="介绍了Markdown的基本用法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tuchuang-1259758352.cos.ap-nanjing.myqcloud.com/img/pexels-piccinng-3075993.jpeg">
+<meta property="article:published_time" content="2022-01-21T14:45:46.000Z">
+<meta property="article:modified_time" content="2022-10-16T07:44:56.395Z">
+<meta property="article:author" content="晨曦">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tuchuang-1259758352.cos.ap-nanjing.myqcloud.com/img/pexels-piccinng-3075993.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/01/21/Markdown%E6%95%99%E7%A8%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":90,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Markdown基本语法总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-16 15:44:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/2018030113290526620.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tuchuang-1259758352.cos.ap-nanjing.myqcloud.com/img/pexels-piccinng-3075993.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MorningLightCode</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Markdown基本语法总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-21T14:45:46.000Z" title="发表于 2022-01-21 22:45:46">2022-01-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-16T07:44:56.395Z" title="更新于 2022-10-16 15:44:56">2022-10-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Markdown基本语法总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天和前天经过<code>极其痛苦</code> 配置过程，最后我的个人博客终于搭建成功了！！！（当然，博客的搭建过程并不复杂，只是喜欢追求完美的我，总是因为一点点的瑕疵就感到不满意，然后就想着解决，奈何<code>技术太菜</code>，所以只能时间来凑.好了，博客搭建好了，那么接下来自然而然就是通过它来记录学习过程了。所以自然就想到了Markdown。博客不同于word排版，通过框选、点击相应的按钮等操作就可以实现想要的效果，markdown完全是键盘操作，想要什么样的效果，完全是通过相应的语法来实现，也就是通过不同的符号和格式来实现。那么废话不多说，开始Markdown的语法的学习。</p>
+<h2 id="一、Markdown-纯文本基本语法"><a href="#一、Markdown-纯文本基本语法" class="headerlink" title="一、Markdown 纯文本基本语法"></a>一、Markdown 纯文本基本语法</h2><h3 id="1、标题"><a href="#1、标题" class="headerlink" title="1、标题"></a><strong>1、标题</strong></h3><p>正如我们日常写课程报告一样，不同大小的标题显得文章更有层次感。那么Markdown中的不同的标题是通过<code>#</code>的个数来区分的，个数从1-6字体一次减小，常用的为标题二，也就是本小结的标题<code>一、Markdown纯文本基本语法</code>这样的大小（<code>1、标题</code>为标题三）。<br><strong>使用方法：</strong><code>#</code>个数+<code>空格</code>+<code>标题</code></p>
+<h3 id="2、字体"><a href="#2、字体" class="headerlink" title="2、字体"></a><strong>2、字体</strong></h3><p>在基本用法中，常用的就是<code>加粗</code>、<code>斜体</code>、<code>删除线</code>、<code>下划线</code>等这些操作。</p>
+<ul>
+<li><strong>加粗和斜体</strong><br><strong>加粗</strong>和<strong>斜体</strong>是通过<code>*</code>或者<code>_</code>的个数来控制的。我就用<code>*</code>来演示。一个<code>*</code>代表<em>倾斜</em>，两个代表<strong>加粗</strong>,三个代表 <strong><em>加粗倾斜</em></strong>。<br><strong>使用方法：</strong><code>*</code>个数+<code>内容</code>+<code>*</code>个数。如 <code>** 我最棒 **</code>。如果在使用过程中有无法识别的情况，请注意空格的使用。</li>
+<li><strong>删除线</strong><br>在我们浏览公众号时经常会看到 “<strong><del>我可以</del></strong>“这样的写法，那么就是删除线的是用。在Markdown中使用<code>~~</code>+<code>内容</code>+<code>~~</code>的格式来呈现出删除线的效果。需要注意的是这里的<code>~~</code>是英文中的，如果未能实现想要的效果，可能是中英文输入的问题。</li>
+<li><strong>下划线</strong><br>下划线在word中可以说很简单的操作，但是在Markdown中就不是那么容易了。想要实现下划线的效果，需要写一长串的符号：<code>&lt;span style=&quot;border-bottom:2px dashed red&quot;&gt;</code>+<code>内容</code>+<code>&lt;/span&gt;</code>。这个当然是自定义程度最高的了，涉及到css的语法，可以定义下划线的宽度、样式以及颜色。比如,<span style="border-bottom:2px solid blue;">Hello World</span><br>。如果为了简单那么可以使用u标签，也就是<code>&lt;u&gt;</code>+<code>内容</code>+<code>&lt;/u&gt;</code>，比如：<u>Hello World</u>。可以看到这是最平常的一种样式。如果只需要简单使用下划线，那么可以用第二种方式。</li>
+</ul>
+<h3 id="3、分割线"><a href="#3、分割线" class="headerlink" title="3、分割线"></a><strong>3、分割线</strong></h3><p>在日常的博客中，分割线必不可少。在Markdown中你可以使用<code>三个以上</code>的 <code>*</code>、<code>-</code>、<code>_</code>来做出分割线，但行内不能有其他内容。比如：</p>
+<hr>
+<p>上面就是三个<code>*</code>做出来的分割线。</p>
+<h3 id="4、引用"><a href="#4、引用" class="headerlink" title="4、引用"></a><strong>4、引用</strong></h3><p>在需要引用的文字前在上<code>&gt;</code>即可。以下例子引用<code>罗素</code>的<code>我为什么活着</code>。</p>
+<blockquote>
+<p>  对爱情的渴望，对知识的追求，对人类苦难不可遏制的同情心，这三种纯洁但无比强烈的激情支配着我的一生。这三种激情，就像飓风一样，在深深的苦海上，肆意地把我吹来吹去，吹到濒临绝望的边缘。</p>
+<p>  我寻求爱情，首先因为爱情给我带来狂喜，它如此强烈，以致我经常愿意为了几小时的欢愉而牺牲生命中的其他一切。我寻求爱情，其次是因为爱情解除孤寂——那是一颗震颤的心，在世界的边缘，俯瞰那冰冷死寂、深不可测的深渊。我寻求爱情，最后是因为在爱情的结合中，我看到圣徒和诗人们所想象的天空景象的神秘缩影。这就是我所寻求的，虽然它对人生似乎过于美好，然而最终我还是得到了它。<br>  我以同样的热情寻求知识，我希望了解人的心灵。我希望知道星星为什么闪闪发光，我试图理解毕达哥拉斯的思想威力，即数字支配着万物流转。这方面我获得一些成就，然而并不多。</p>
+<p>  爱情和知识，尽可能地把我引上天堂，但同情心总把我带回尘世。痛苦的呼号的回声在我心中回荡，饥饿的儿童，被压迫者折磨的受害者，被儿女视为可厌负担的无助的老人，以及充满孤寂、贫穷和痛苦的整个世界，都是对人类应有生活的嘲讽。我渴望减轻这些不幸，但是我无能为力，而且我自己也深受其害。<br>  这就是我的一生，我觉得它值得活。如果有机会的话，我还乐意再活一次。</p>
+</blockquote>
+<p>当然你可以在引用中嵌套其他用法，这里不在赘述。</p>
+<h3 id="5、列表"><a href="#5、列表" class="headerlink" title="5、列表"></a><strong>5、列表</strong></h3><ul>
+<li><strong>无序列表</strong><br>在Markdown中可以使用单个的<code>-</code>、<code>*</code>、<code>+</code>来实现无序列表的标记。如<code>-</code>+<code>实例一</code>。当然记住标记与内容要用空格隔开。如：</li>
+<li>中国</li>
+<li>美国</li>
+<li>日本</li>
+</ul>
+<p>无序列表可以嵌套，下一级在上一级的基础上加三个空格即可。如这样写：</p>
+<blockquote>
+<p>&nbsp;- 中国</p>
+<p> &nbsp;&nbsp;&nbsp;- 日本</p>
+<p>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- 美国 </p>
+</blockquote>
+<p><code>效果：</code></p>
+<ul>
+<li>中国<ul>
+<li>日本<ul>
+<li>美国</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>有序列表</strong><br>有序列表的用法为<code>数字（1、2 、3……）</code>+<code>.(英文句号）</code>+’空格’+<code>内容</code>。如以下：</li>
+</ul>
+<ol>
+<li>中国</li>
+<li>美国</li>
+<li>日本</li>
+</ol>
+<h3 id="6、表格"><a href="#6、表格" class="headerlink" title="6、表格"></a><strong>6、表格</strong></h3><p>如果需要在博客中加入表格，那么可以用下面的语法：<br><code>表头|表头|表头</code><br><code>-|:-:|-:</code><br><code>内容|内容|内容</code><br><code>内容|内容|内容</code><br><code>效果如下：</code></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>国家</th>
+<th style="text-align:center">人口</th>
+<th style="text-align:right">排名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国</td>
+<td style="text-align:center">14</td>
+<td style="text-align:right">No.1</td>
+</tr>
+<tr>
+<td>美国</td>
+<td style="text-align:center">2.2</td>
+<td style="text-align:right">No.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>默认文字居中，<code>-</code>两边都加代表文字居中，<code>-</code>加在右边代表文字居右</p>
+<h3 id="7、代码"><a href="#7、代码" class="headerlink" title="7、代码"></a><strong>7、代码</strong></h3><p>程序员嘛，在写博客时肯定缺少不了贴代码。Markdown中可以用两个<code>反引号</code>来标记代码。也可以用<code>``` </code>来显示代码段。如果这样写：<code>```java</code>+<code>代码</code>+<code>``` </code>，则代表java代码，实例效果如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HelloWorld</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="二、Markdown纯文本进阶语法"><a href="#二、Markdown纯文本进阶语法" class="headerlink" title="二、Markdown纯文本进阶语法"></a>二、Markdown纯文本进阶语法</h2><p>为了使自己的博客内容排版更好看一点，就需要学习更过知识了。</p>
+<h3 id="1、更改字体、大小、颜色"><a href="#1、更改字体、大小、颜色" class="headerlink" title="1、更改字体、大小、颜色"></a><strong>1、更改字体、大小、颜色</strong></h3><p><code>语法：</code> <code>&lt;font face =&quot;宋体&quot;&gt;内容&lt;/font&gt;</code>、<code>&lt;font color=yellow&gt;内容&lt;/font&gt;</code>、<code>&lt;font size=5&gt;内容&lt;/font&gt;</code>。</p>
+<p>例子：<code>&lt;font size=6 color= blue face=&quot;宋体&quot;&gt;Hello World!&lt;/font&gt;</code></p>
+<p><code>效果：</code> <font size=5 color= blue face="宋体">Hello World!</font></p>
+<h3 id="2、为文字添加背景色"><a href="#2、为文字添加背景色" class="headerlink" title="2、为文字添加背景色"></a><strong>2、为文字添加背景色</strong></h3><p>当然这个添加背景色是整个一行都会添加。</p>
+<p><code>语法</code>:<code>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#003454&gt;内容&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></p>
+<p><code>例子</code>:<code>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#003454&gt;Hello World!&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></p>
+<p><code>效果</code>:</p>
+<table><tr><td bgcolor=#FF32AB>Hello World!</td></tr></table>
+
+<h3 id="3、设置文字对齐方式"><a href="#3、设置文字对齐方式" class="headerlink" title="3、设置文字对齐方式"></a><strong>3、设置文字对齐方式</strong></h3><p>在Markdown中设置文字对齐方式通过下列语法：</p>
+<p><code>居中对齐</code>:<code>&lt;center&gt;内容&lt;/center&gt;</code></p>
+<p><code>左对齐:</code> <code>&lt;p align=&quot;left&quot;&gt;内容&lt;/p&gt;</code></p>
+<p><code>右对齐</code>:<code>&lt;p align=&quot;right&quot;&gt;内容&lt;/p&gt;举例效果：</code>:</p>
+<p align="left">富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善</p>
+<center>富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善</center>
+<p align="right">富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善</p>
+
+
+
+
+<h3 id="4、加上下标"><a href="#4、加上下标" class="headerlink" title="4、加上下标"></a><strong>4、加上下标</strong></h3><p><code>下标语法</code>：<code>内容&lt;sub&gt;内容&lt;/sub&gt;内容</code><br><code>例子</code>: <code>Na&lt;sub&gt;2CO&lt;sub&gt;3</code><br><code>效果</code>:Na<sub>2</sub>CO<sub>3</sub><br><code>上标语法</code>:<code>内容&lt;sup&gt;内容&lt;/sup&gt;内容</code><br><code>例子</code>：<code>深圳腾讯&lt;sup&gt;TM&lt;/sup&gt;</code><br><code>效果</code>:深圳腾讯<sup>TM</sup></p>
+<h2 id="三、Markdown进阶使用"><a href="#三、Markdown进阶使用" class="headerlink" title="三、Markdown进阶使用"></a>三、Markdown进阶使用</h2><h3 id="1、超链接"><a href="#1、超链接" class="headerlink" title="1、超链接"></a><strong>1、超链接</strong></h3><p>Markdown支持两种形式的链接语法：行内式和参考式。</p>
+<ul>
+<li><strong>行式链接</strong></li>
+</ul>
+<p><code>行内式语法</code>:<code>内容[链接名](链接地址）内容</code><br><code>例子</code>：这就是<a target="_blank" rel="noopener" href="http://baidu.com">百度</a>,点击一下，你就知道！<br>当然如果想在新标签也中打开链接网址，学过html的都知道，可以用<code>&lt;a href=&quot;链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</code><br>例如：<code>&lt;a href=&quot;http://baidu.com&quot; target=&quot;_blank&quot;&gt;百度一下&lt;/a&gt;</code><br><code>效果</code>：<a href="http://baidu.com" target="_blank">百度一下</a></p>
+<ul>
+<li><strong>参考式链接</strong><br><code>参考式链接语法</code>：<code>内容[链接名][id]内容</code>+<code>[id]:链接地址</code>,后者可以写在文章的任意位置，当然一般写在底部。<br><code>例子</code>:<code>内容可参考[百度一下][1].[1]:www.baidu.com</code><br><code>效果</code>:内容可参考<a target="_blank" rel="noopener" href="http://baidu.com/">百度</a></li>
+</ul>
+<h3 id="2、自动链接"><a href="#2、自动链接" class="headerlink" title="2、自动链接"></a><strong>2、自动链接</strong></h3><p>Markdown也可以自动链接的形式来处理网址和电子邮件信箱，只需要用尖括号括起来就可以了，Markdown会将其自动转换成链接。<br><code>例子</code>:<code>&lt;http://baidu.com&gt;</code><br><code>效果</code>:<a target="_blank" rel="noopener" href="http://baidu.com">http://baidu.com</a></p>
+<h3 id="3、图片的使用"><a href="#3、图片的使用" class="headerlink" title="3、图片的使用"></a><strong>3、图片的使用</strong></h3><p>在日常的博客编写的过程中少不了图片的使用。Markdown中的图片插入不同于word直接拖拽式的，而是通过特定的语法来引用。与超链接相同，图片的插入同样分为<code>行内式</code>和<code>参考式</code>两种。</p>
+<ul>
+<li><p><strong>行内式</strong><br><code>语法</code>:<code>![自定义内容](URL)</code><br><code>例子</code>:<code>![行情分析](https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png)</code><br><code>效果</code>:<img src="https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png" alt="行情分析"><br><code>注意</code>:上面的<code>URL</code>可以为本地路径，也可以是图片的网址。当然显然第二种更好，因为这样当本地路径发生变化时图片并不会丢失。这里我选择的是<code>腾讯云图床</code>对博客中的图片进行存储。</p>
+</li>
+<li><p><strong>参考式</strong><br>参考式的用法与超链接大同小异，不在赘述！</p>
+</li>
+<li><strong>图片的对齐方式</strong><br><code>语法</code>:<code>&lt;div align=center&gt;![自定义内容](URL)</code>,想要居右对齐，修改<code>align</code>参数为<code>right</code>即可。与上述的文字的对齐方式大同小异，不再演示。</li>
+<li><strong>图片大小的设置</strong><br><code>语法</code>：<code>&lt;img src=&quot;URL&quot; width=&quot;数值或者百分比&quot; height=&quot;数值或百分比&quot;/&gt;</code><br><code>例子</code>:<code>&lt;img src=&quot;https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png&quot; width=&quot;200&quot; height=&quot;100&quot; div align=center/&gt;</code><br><code>效果</code>:<br><img src="https://myblog-picture-1259758352.cos.ap-nanjing.myqcloud.com/QQ%E6%88%AA%E5%9B%BE20200731192642.png" width="400" height="300" div align=center/></li>
+</ul>
+<h3 id="4、LaTeX公式"><a href="#4、LaTeX公式" class="headerlink" title="4、LaTeX公式"></a><strong>4、LaTeX公式</strong></h3><p>由于本人可能近期用到LaTeX公式的情况比较少，所以仅举一个原作者中提到的一个例子。<br><code>例子</code>:<script type="math/tex">X\stackrel{F}{\longrightarrow}Y</script><br><code>效果</code>:$ X\stackrel{F}{\longrightarrow}Y$</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上列举的是最为常用的Markdown用法，当然Markdown还有许多其他的用法，感兴趣的可以查阅相关资料。</p>
+<hr>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/99319314">Markdown语法及原理从入门到高级(可能是全网最全）</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">晨曦</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/01/21/Markdown%E6%95%99%E7%A8%8B/">http://example.com/2022/01/21/Markdown%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">MorningLightCode</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Markdown/">Markdown</a></div><div class="post_share"><div class="social-share" data-image="https://tuchuang-1259758352.cos.ap-nanjing.myqcloud.com/img/pexels-piccinng-3075993.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/10/14/Vim%E5%AD%A6%E4%B9%A0/"><img class="prev-cover" src="https://tuchuang-1259758352.cos.ap-nanjing.myqcloud.com/img/pexels-roberto-nickson-2559941.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Vim学习</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://blog-1259758352.cos.ap-nanjing.myqcloud.com/2018030113290526620.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">晨曦</div><div class="author-info__description">个人生活与学习记录</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/cxz0214"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/cxz0214" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1721529255@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问本站</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Markdown-%E7%BA%AF%E6%96%87%E6%9C%AC%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">一、Markdown 纯文本基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%A0%87%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">1、标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AD%97%E4%BD%93"><span class="toc-number">2.2.</span> <span class="toc-text">2、字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">2.3.</span> <span class="toc-text">3、分割线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%BC%95%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">4、引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%88%97%E8%A1%A8"><span class="toc-number">2.5.</span> <span class="toc-text">5、列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.6.</span> <span class="toc-text">6、表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E4%BB%A3%E7%A0%81"><span class="toc-number">2.7.</span> <span class="toc-text">7、代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Markdown%E7%BA%AF%E6%96%87%E6%9C%AC%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">二、Markdown纯文本进阶语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93%E3%80%81%E5%A4%A7%E5%B0%8F%E3%80%81%E9%A2%9C%E8%89%B2"><span class="toc-number">3.1.</span> <span class="toc-text">1、更改字体、大小、颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E4%B8%BA%E6%96%87%E5%AD%97%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E8%89%B2"><span class="toc-number">3.2.</span> <span class="toc-text">2、为文字添加背景色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E6%96%87%E5%AD%97%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">3、设置文字对齐方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%8A%A0%E4%B8%8A%E4%B8%8B%E6%A0%87"><span class="toc-number">3.4.</span> <span class="toc-text">4、加上下标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Markdown%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">三、Markdown进阶使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">4.1.</span> <span class="toc-text">1、超链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5"><span class="toc-number">4.2.</span> <span class="toc-text">2、自动链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%9B%BE%E7%89%87%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">3、图片的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81LaTeX%E5%85%AC%E5%BC%8F"><span class="toc-number">4.4.</span> <span class="toc-text">4、LaTeX公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/16/Git%E5%AD%A6%E4%B9%A0/" title="Git学习"><img src="https://cxz-0214-1259758352.cos.ap-nanjing.myqcloud.com/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%86%8C/pexels-rok-romih-3312671.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git学习"/></a><div class="content"><a class="title" href="/2022/10/16/Git%E5%AD%A6%E4%B9%A0/" title="Git学习">Git学习</a><time datetime="2022-10-16T02:08:38.000Z" title="发表于 2022-10-16 10:08:38">2022-10-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/14/Vim%E5%AD%A6%E4%B9%A0/" title="Vim学习"><img src="https://tuchuang-1259758352.cos.ap-nanjing.myqcloud.com/img/pexels-roberto-nickson-2559941.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vim学习"/></a><div class="content"><a class="title" href="/2022/10/14/Vim%E5%AD%A6%E4%B9%A0/" title="Vim学习">Vim学习</a><time datetime="2022-10-14T00:02:17.000Z" title="发表于 2022-10-14 08:02:17">2022-10-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2022 By 晨曦</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'hexo-0ghjkq37e612d92d',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'hexo-0ghjkq37e612d92d',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2022/01/21/Markdown%E6%95%99%E7%A8%8B/'
+    this.page.identifier = '/2022/01/21/Markdown%E6%95%99%E7%A8%8B/'
+    this.page.title = 'Markdown基本语法总结'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Twikoo' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
